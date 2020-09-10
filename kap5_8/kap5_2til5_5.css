@@ -1,0 +1,15 @@
+#bold{
+	font-weight: bold;
+}
+#red{
+	color: #D60000;
+	font-style: italic;
+}
+#type{
+	font-family: verdana, arial, sans-serif;
+}
+#background{
+	width: 450px;
+	background-color: pink;
+	border: 1px dotted purple;
+}

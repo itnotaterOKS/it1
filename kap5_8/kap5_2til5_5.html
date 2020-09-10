@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Ulike typer skrift + CSS </title>
+        <link rel="stylesheet" type="text/css" href="undervisning.css">
+        <link rel="stylesheet" type="text/css" href="kap5_2til5_5.css">
+  </head>
+  <body>
+    <h1> Tekst </h1>
+  	<p> Vi har lært at tekst skrives i avsnitt markert med taggen  < p > for paragraph. Dersom vi skriver tekst uten denne taggen vil den også synes på siden, men da mister man muligheten for å stilsette teksten i css. <br>
+  	For å få linjeskift trenger man ikke avslutte og starte en ny < p >, men vi kan bruke taggen < br >. </p>
+
+  	<h1> Overskrifter </h1>
+  	<p> Vi angir overskrifter fra taggen < h1 > til < h6 >. < h6 > er den minste underoverskriften. <br>
+
+    <h2> Oppgaver </h2>
+    <p> I boka side 44: oppgave 5.4 - 5.7 </p>
+
+    <img src="media/oppg44.png" width="70%"><br><br>
+
+  	<h1> CSS </h1>
+    <p> CSS = cascading style sheet. Setter utseendet for nettsiden: farger, plasseringer, størrelser, skrifttyper osv. Dette kan legges inn på tre ulike måter: </p>
+  	<h2> De tre ulike metodene </h2 >
+  	<ul>
+  		<li> Inline: Vi setter all stilsetting inn i taggene: </li>
+  		<li> Internal: Vi setter all stilsetting i < head >, i en egen tag < style > < /style ></li>
+  		<li> External: Vi lager et eget dokument stilark.css der vi legger inn all stilsetting. Dette legges til i < head >, ved taggen < link rel = "stylsheet" type = "text/css" href = "css/stilark.css" ></li>
+  	</ul>
+
+  	<p> Internal, med < style > < /style >, kan brukes dersom vi har lite stilsetting. All stilsetting skrives da som <br>
+  	&nbsp;&nbsp; elementViVilEndre{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; egenskapViVIilEndre: nyVerdi;<br>
+  	&nbsp;&nbsp; }<br>
+
+    <p> External er den metoden vi i hovedsak skal bruke. Dvs at dere må referere til egne stilark i alle oppgaver, der all css-kode legges. <br>
+  	Dere kan velge å ha flere stilark til samme nettside, for eksempel et generelt og et som er spesielt for oppgaven. Da legger man til to lenker: <br>
+  	&nbsp;&nbsp; < head > <br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < link rel = "stylsheet" type = "text/css" href = "css/stilarkGenerelt.css" > <br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < link rel = "stylsheet" type = "text/css" href = "css/stilarkOppgaven.css" > <br>
+		&nbsp;&nbsp; < /head > <br>
+	  </p>
+
+  	<h2> Viktigheten av en ryddig mappestruktur </h2>
+  	<p> For at vi skal være sikre på at html-fila kaller på det ønskede stilarket, eller riktig bilde eller annet, må vi ha orden på hvor filene ligger. <br>
+  	Under vises to eksempler på hvordan jeg kan finne css-fila:</p>
+
+  	<h3> Eksempel 1: html_intro.html skal hente stilarket css_intro.css: </h3>
+    <img src="media/eksempel1_5_3.png" width = "800px"> <br>
+    <p> Fila finnes da som <br>
+    &nbsp;&nbsp; < link rel = "stylsheet" type = "text/css" href = "css_intro.css" > </p>
+
+    <h3> Eksempel 2: html_intro.html skal hente stilarket css_intro.css: </h3>
+    <img src="media/eksempel2_5_3.png" width = "800px"> <br>
+    <p> Fila finnes da som <br>
+    &nbsp;&nbsp; < link rel = "stylsheet" type = "text/css" href = "css/css_intro.css" > </p>
+
+    <h3> Eksempel 3: html_intro.html skal hente stilarket css_intro.css: </h3>
+    <img src="media/eksempel3_5_3.png" width = "800px"><br>
+    <p> Fila finnes da som <br>
+    &nbsp;&nbsp; < link rel = "stylsheet" type = "text/css" href = "../css_intro.css" > </p>
+
+    <h1> For å unngå for lange filadresser har vi derfor en ryddig struktur i IT-filene våre! </h1>
+
+    <h1> Hva angir vi i stilarkene våre? </h1>
+    <p> Mens et html-dokument har tagger som angir at det er et html-dokument (< !doctype html>, < body > osv.), går css-fila "rett på sak". <br>
+    Strukturen er at man først angir hvilket element det gjelder, f.eks body, h1, p, img osv. før man gir egenskapene for disse. Kommentarer angis i /* */ i css-filer:<br><br>
+    &nbsp;&nbsp; body{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; background-color: #EBF0F1; /* bakgrunnsfarge */ <br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; color: #1C3C50; /* skriftfarge */<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; margin-left: 50px; /*avstand på venstre side */<br>
+  	&nbsp;&nbsp;}<br>
+  	&nbsp;&nbsp; p{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; font-size: 150%; /*skriftstørrelse, kan også gis i px */<br>
+ 	  &nbsp;&nbsp; }</p>
+
+  	<h1> CSS-setting av tekst </h1>
+  	<p> Ved hjelp av css kan vi for teksten endre farge, bakgrunnsfarge, kantlinjer tekstvekting og skrifttype: <br>
+
+  	<p id = "bold"> Denne skriften er skrevet i fet skrift</p>
+  	<p>
+    &nbsp;&nbsp; #bold{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; font-weight: bold; <br>
+  	&nbsp;&nbsp; }</p>
+
+  	<h6 id = "red"> Denne overskriften er rød og kursiv </h6>
+  	<p>
+
+    &nbsp;&nbsp; #red{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; color: #D60000; <br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; font-style: italic; <br>
+  	&nbsp;&nbsp; }</p>
+
+  	<p id = "type"> Denne skriften er i verdana </p>
+  	<p>
+
+    &nbsp;&nbsp; #type{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; font-family: verdana, arial, sans-serif; <br>
+  	&nbsp;&nbsp; }<br>
+  	Mer om ulike fonter finnes her: <a href="https://www.w3schools.com/css/css_font.asp"> css-fonter</a> og her: <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">liste over ulike fonter.</a> Her brukes " " rundt skrifttyper med mellomrom </p>
+
+  	<h3 id = "background"> Denne skriften har bagrunnsfarge og kantlinje </h3>
+  	<p>
+
+    &nbsp;&nbsp; #background{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; width: 450px;<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp; background-color: pink;<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp; border: 1px dotted purple; <br>
+  	&nbsp;&nbsp; }</p>
+
+  	<h2> Oppgaver </h2>
+  	<p> Side 48: Oppgave 5.8 - 5.11 <br>
+    <img src="media/oppg48.png" width="70%"><br>
+    Side 50: Oppgave 5.12 - 5.13 <br>
+    <img src="media/oppg50.png" width="70%"><br>
+    Deretter: lag et html-dokument med ulike tekster og bruk css i kombinasjon med klasser/id til å endre skriftfarger, typer, størrelser, bakgrunnsfarger, kantlinjer og vekting. Her skal du prøve deg frem med ulike egenskaper. Besøk nettsiden <a href="w3schools.com">w3schools</a> og søk opp de ulike egenskapene for å se hvilke verdier du kan velge. <br><br>
+    Er noe uklart fra kapittel 5? Se gjennom videogjennomgangene til læreboka her: <a href="https://www.youtube.com/watch?v=WOn7vau5DEI&list=PL8WTkszC0wYcILfEPOTP9n9CwqtWBqt_Z">spilleliste kapittel 5</a>
+    </p>
+
+  </body>
+</html>
