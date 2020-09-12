@@ -1,0 +1,57 @@
+/* kode som alltid skal med ved bruk av grid */
+* { /* gjelder alle elementer på nettsiden*/
+    box-sizing: border-box; /* sørger for at hele elementet, inkludert padding og border, får den gitte bredden eller høyden */
+}
+[class*="col-"] { /* alle klasser som starter med col-*/
+    float: left; /*justerer mot venstre */
+    padding: 15px; /*vi setter selv en passende padding */
+    border: 1px solid red; /* kun for å se boksene visuelt */
+		min-height: 100px; /*sørger for at elementene får litt størrelse*/
+}
+.row{
+	border: 2px solid blue;
+}
+.row::after {
+	/* setter tomt innhold på ny rad*/
+    content: "";
+    clear: both;
+    display: table; /* elementet oppfører seg som en <table>*/
+}
+/* definerer de breddene på elementene som vi tror vi kan få bruk for */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* vis hvordan vi kan legge inn andre col*/
+.col-a {width: 40%;}
+.col-b {width: 60%;}
+.col-c {width: 20%;}
+
+.utenGrid{
+	width: 60%;
+	margin-left: 20%;
+	min-height: 100px;
+	border: 1px solid red;
+}
+
+/* annen stilsetting av siden*/
+body{
+	background-color: #EBF0F1;
+	color: #1C3C50;
+	margin-left: 50px;
+}
+p{
+	font-size: 120%;
+}
+h3{
+	font-size: 120%;
+}

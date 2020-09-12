@@ -1,0 +1,54 @@
+/* felles stilsetting*/
+* { /* gjelder alle elementer på nettsiden*/
+    box-sizing: border-box; /* sørger for at hele elementet, inkludert padding og border, får den gitte bredden eller høyden */
+}
+.grid-container{
+  display: grid;
+  min-height: 100px; /* for å få større bokser*/
+  border: 2px solid blue;
+}
+.grid-container div{
+  border: 1px solid red; /* kun for å se boksene visuelt */
+  padding: 15px; /*vi setter selv en passende padding */
+}
+
+/* bare like kolonnebredder*/
+.gc1 {
+  grid-template-columns: auto auto auto auto; /* vil fordele kolonnebredde jevnt*/
+  /* aktuelt når man ikke bruker fractions og divene ikke har innhold som fyller hele nettleseren*/
+  justify-content: space-evenly; /* center, start, end, space-around, space-between, space-evenly*/
+}
+/* ulike kolonnebredder i fractions */
+.gc2 {
+  grid-template-columns: 1fr 4fr 2fr 2fr;
+  /* stor liten midten midten*/
+  /* aktuelt dersom et element har lavere høyde enn raden */
+  align-content: space-between; /* center, start, end, space-around, space-between, space-evenly */
+}
+.gc3 {
+  grid-template-columns: 1fr 2fr 3fr 4fr 5fr 6fr; /* øker fra 1fr til 6fr */
+  /* vis hva som skjer hvis vi setter størrelse på gc*/
+  width: 50%;
+  margin-left: 25%;
+}
+/* ulike kolonnebredder i px */
+.gc4 {
+  grid-template-columns: 50px 200px 100px 300px auto; /* auto vil tilpasse seg det som er igjen av raden */
+  /* vis hva som skjer hvis alle er i px og ingen er auto */
+}
+.gc5{
+  grid-template-columns: auto 500px auto;
+}
+
+/* annen stilsetting av siden*/
+body{
+	background-color: #EBF0F1;
+	color: #1C3C50;
+	margin-left: 50px;
+}
+p{
+	font-size: 120%;
+}
+h3{
+	font-size: 120%;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Grid </title>
+        <link rel="stylesheet" type="text/css" href="grid1.css">
+  </head>
+  <body>
+  	<h1> Å strukturere innhold vertikalt </h1>
+  	<p> Vi bruker div-bokser til å strukturere innhold dersom det ligger under hverandre i bokser som dekker hele siden. Dersom vi ønsker å legge elementer ved siden av hverandre, holder det ikke kun med div-elementer, disse må ha noen ekstra egenskaper vi setter i css. </p>
+  	<p>For at plasseringene skal holde seg likt når på skjermer av ulike dimensjoner og når vi endrer størrelse på nettleservinduet, bruker vi enten flexboxer eller grid der vi angir alle størrelser i prosent eller fractions. </p>
+
+    <h1> Responsivt grid, type 1 </h1>
+  	<p> Vi kommer til å forholde oss til grid for å strukturere. Det finnes flere måter å gjøre dette på, her gjennomgås <a href="https://www.w3schools.com/css/css_rwd_grid.asp" target="blank">denne</a> måten. Gridet er en slags tabell der hver rad har ulikt antall kolonner og ulik størrelse på kolonnene der størrelsen er gitt i prosent. </p>
+
+  	<div class="row">
+  	   <div class="col-1"> 8.33 % </div>
+       <div class="col-11"> 91.66 % </div>
+  	</div>
+
+    <div class="row">
+		   <div class="col-4"> <img src="intro1.jpg" width="100%"></div>
+       <div class="col-4"> 33.33% </div>
+       <div class="col-4"> 33.33% </div>
+  	</div>
+
+  	<div class="row">
+  		<div class="col-3"> 25% </div>
+  		<div class="col-6"> 50% </div>
+  		<div class="col-3"> 25% </div>
+  	</div>
+
+  	<div class="row">
+  		<div class="col-1"> 8.33% </div>
+  		<div class="col-1"> 8.33% </div>
+  		<div class="col-6"> 50% </div>
+  		<div class="col-4"> 33.33% </div>
+  	</div>
+
+    <div class="row">
+      <div class="col-a"> 40% </div>
+      <div class = "col-b"> 60% </div>
+    </div>
+    <div class = "row">
+      <div class= "col-c"> 20 % </div>
+      <div class= "col-b"> 60 % </div>
+      <div class="col-c"> 20 % </div>
+    </div>
+    <div class = "utenGrid">Trenger ikke bruke grid for å midtstille. </div>
+
+  </body>
+</html>

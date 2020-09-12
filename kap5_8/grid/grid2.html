@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Grid </title>
+        <link rel="stylesheet" type="text/css" href="grid2.css">
+  </head>
+  <body>
+  	<h1> Å strukturere innhold vertikalt </h1>
+  	<p> Vi bruker div-bokser til å strukturere innhold dersom det ligger under hverandre i bokser som dekker hele siden. Dersom vi ønsker å legge elementer ved siden av hverandre, holder det ikke kun med div-elementer, disse må ha noen ekstra egenskaper vi setter i css. </p>
+  	<p> For at plasseringene skal holde seg likt når på skjermer av ulike dimensjoner og når vi endrer størrelse på nettleservinduet, bruker vi enten flexboxer eller grid der vi angir alle størrelser i prosent eller fractions.</p>
+
+  	<h1> Responsivt grid, type 2 </h1>
+  	<p> Vi kommer til å forholde oss til grid for å strukturere. Det finnes flere måter å gjøre dette på, her gjennomgås <a href="https://www.w3schools.com/css/css_grid_container.asp" target="blank">denne</a> måten. Gridet kan forstatt betraktes som en slags tabell, men det implementeres litt annerledes og størrelsen gis i fractions av siden. </p>
+
+    <div class="grid-container gc1">
+      <div> fire like hvis innholdet er likt</div>
+      <div> fire like </div>
+      <div> fire like </div>
+      <div> fire like </div>
+    </div>
+
+    <div class="grid-container gc2">
+      <div> minst 1fr </div>
+      <div> størst 4fr </div>
+      <div> midten 2fr </div>
+      <div> midten 2fr </div>
+      <div> minst 1fr </div>
+      <div> størst 4fr </div>
+      <div> midten 2fr </div>
+      <div> midten 2fr </div>
+    </div>
+
+    <div class="grid-container gc3">
+      <div> 1fr </div>
+      <div> 2fr </div>
+      <div> 3fr </div>
+      <div> 4fr </div>
+      <div> 5fr </div>
+      <div> 6fr </div>
+      <!-- Vise hva som skjer hvis man legger til flere eller fjerner -->
+      <div> 1fr </div>
+      <div> 2fr </div>
+      <div> 3fr </div>
+      <div> 4fr </div>
+      <div> 5fr </div>
+      <div> 6fr </div>
+    </div>
+
+    <div class="grid-container gc4">
+      <div> 10px </div>
+      <div> 200px </div>
+      <div> 100px </div>
+      <div> 300px </div>
+      <div> auto </div>
+    </div>
+
+    <div class="grid-container gc5">
+      <div> <p> quix </p> </div>
+      <img src="intro3.jpg" width="100%">
+      <div><p> hvilke instrumenter ser du her? (og et skjema) </p></div>
+    </div>
