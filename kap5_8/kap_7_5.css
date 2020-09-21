@@ -1,0 +1,104 @@
+/* stilsetting for horisontal listemeny */
+#menyliste li{
+    list-style-type:none;
+    background-color: #00868B;
+    color: #E5FAFB;
+    width: 120px;
+    margin: 3px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 10px; /* for å runde av hjørnene */
+   	display: inline; /* for å få vannrett meny */
+}
+#menyliste li a, #menyliste li a:visited{
+	color: #E5FAFB;
+	text-decoration: none;
+}
+#menyliste li a:hover{
+	color: #A1C8C8;
+}
+
+/* stilsetting for horisontal tabellmeny */
+#lenketabell{
+	width: 90%;
+	margin-left: 5%;
+	height: 80px;
+	border: none;
+}
+.tom{
+	border: none;
+	width: 4%;
+}
+.lenkecelle{
+	width: 20%;
+	text-align: center;
+	background-color: #00868B;
+    color: #E5FAFB;
+    border: none;
+    border-radius: 20%;
+}
+.lenkecelle a, .lenkecelle a:visited{
+	color: #E5FAFB;
+	text-decoration: none;
+}
+.lenkecelle a:hover{
+	color: #A1C8C8;
+}
+
+/* stilsetting for horisontal divmeny */
+#menyrad{
+	height: 80px;
+	width: 90%;
+	margin-left: 5%;
+}
+.tomDiv{
+	width: 6%;
+	display: inline-block; /* må bruke inline-block for å kunne endre høyde og bredde*/
+}
+.menyDiv{	
+	height: 78px;
+	width: 24%;
+	display: inline-block;
+	line-height: 78px; /* for å sentrere teksten */
+	text-align: center;
+	background-color: #00868B;
+    color: #E5FAFB;
+    font-size: 20px;
+    border-radius: 15px;
+}
+.menyDiv a, .menyDiv a:visited{
+	background-color: #00868B;
+    color: #E5FAFB; 
+    text-decoration: none;
+}
+.menyDiv a:hover{
+	color: #A1C8C8;
+}
+
+/* stilsetting for vertikal div-meny */
+#ramme{
+	width: 100%;
+	height: 300px;
+	border: 1px solid black;
+}
+#loddrettMeny{
+	display: inline-block;
+	width: 29%;
+	height: 300px;
+}
+#siden{
+	display: inline-block;
+	width: 70%;
+	height: 300px;
+}
+
+/* annen stilsetting */
+#hoyre{
+	display: inline;
+	width: 65%;
+	float: right;
+}
+#venstre{
+	width: 35%;
+	display: inline-block;
+}

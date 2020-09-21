@@ -1,0 +1,10 @@
+/* ol li {
+    list-style-type:lower-roman;
+} */
+
+#liste1 li {
+    list-style-type: lower-roman;
+}
+#liste2 li{
+  list-style-type: square;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Kap 6.4 og 7.7: bilder </title>
+	<link rel="stylesheet" type="text/css" href="undervisning.css">
+	<link rel="stylesheet" type="text/css" href="kap_6_4.css">
+</head>
+<body>
+	<h1> Kap 6.4 og 7.7: bilder </h1>
+	<p> Det er to måter å legge inn bilder på: enten å kun bruke < img >-taggen, eller å bruke denne i kombinasjon med < figure > <br>
+	Attributtene til img-taggen er kilde, høyde og bredde, samt en alternativ tekst dersom bildet ikke kan vises: <br>
+  &nbsp;&nbsp; < img src="media/rykk.jpeg" alt="her skulle det vært et bilde" width="400px"> <br>
+  <img src="media/rykk.jpeg" alt="her skulle det vært et bilde" width="400px"><br><br>
+  Bildene som legges ved kan enten ha lokal plassering: src="media/rykk.jpeg", eller vi kan bruke bilder fra eksterne nettsider: src="http://atletklubben.no/images/TAK/Nyhetsbilder/Asta%20Rnning%20Fjrli%20i%20rykk%20NM%202016_630.jpg" slik at bildet legges ut som <br>
+  &nbsp;&nbsp; < img src="http://atletklubben.no/images/TAK/Nyhetsbilder/Asta%20Rnning%20Fjrli%20i%20rykk%20NM%202016_630.jpg" alt="her skulle det vært et bilde" width="400px" ><br>
+  <img src="http://atletklubben.no/images/TAK/Nyhetsbilder/Asta%20Rnning%20Fjrli%20i%20rykk%20NM%202016_630.jpg" alt="her skulle det vært et bilde" width="400px"><br><br>
+
+  Dersom man ønsker bilder med bildetekst, f.eks. slik vi gjør det i rapporter, kan vi bruke < figure > < /figure >-taggen: <br>
+  &nbsp;&nbsp;< figure ><br>
+  &nbsp;&nbsp;&nbsp;&nbsp; < img src="media/rykk.jpeg" alt="her skulle det vært et bilde" idth="400px" ><br>
+  &nbsp;&nbsp;&nbsp;&nbsp; < figcaption> Bilde av Asta som rykker < /figcaption ><br>
+	&nbsp;&nbsp; < /figure ></p>
+  <figure>
+  	<img src="media/rykk.jpeg" alt="her skulle det vært et bilde" width="400px">
+  	<figcaption> Bilde av Asta som rykker </figcaption>
+	</figure>
+
+	<p> Bilder som settes inn kun som < img > er det vi kaller inline: neste element legges automatisk ved siden av, ikke på ny linje: <br>
+	Jeg skriver tekst <img src="media/foss.jpg" alt="bildet vises ikke" width="200px"> og fortsetter med tekst <br>
+
+	<h2> Hvorfor bruke < figure >? </h2>
+	<p> Gir en "boks" rundt bildet og bildeteksten, slik at vi kan sette alle avstander felles for disse - det sparer oss for endel ekstra arbeid. Skal vi ikke ha figurtekst er det egentlig ikke vits i å bruke < figure >. En annen forskjell er at < img > er inline (neste element legges ved siden av bildet) mens < figure > er block (neste element legges under bildet). </p>
+
+	<h1> Bakgrunnsbilder </h1>
+	<p> Bakgrunnsbilder er en css-egenskap. Vi kan sette bakgrunnsbilder for en hel side (body) eller for enkeltelementer (f.eks for en tabell) <br>
+	I tillegg til selve bildet kan vi bestemme størrrelse på bildet, om bildet skal repeteres dersom det av størrelse er mindre enn siden, plassering av bakgrunnen dersom den ikke repeteres og om bildet skal følge scrolling eller ikke: <br>
+	&nbsp;&nbsp; body{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; background-image: url('../media/lundefugl.jpg'); <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; background-size: 50%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; background-repeat: no-repeat;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; background-position: right top;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; background-attachment: fixed;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; color: #FFFFFF;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;background-color: #444444; <br>
+	&nbsp;&nbsp; }</p>
+
+	<h1 id="over">Denne overskriften har id over </h1>
+	<p> &nbsp;&nbsp; #over{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 50%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; background-image: url('media/foss.jpg');<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; background-size: 100%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; height: 200px;<br>
+	&nbsp;&nbsp; }</p>
+
+	<h2> Oppgaver </h2>
+	<p> 1. I læreboka på side 58: oppgave 6.9 <br>
+	<img src="media/oppg58.png" width="70%"><br>
+	2. I læreboka på side 77: oppgave 7.15 og 7.16. <br>
+	<img src="media/oppg77.png" width="70%"><br>
+	3. Lag en nettissde der du legger til et bilde med bildetekst (figure) og et bilde uten bildetekst (kun img).<br>
+	Sida skal ha et bilde som bakgrunn, og du velger selv egenskapene til bildet. </p>
+  </body>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/undervisning.css">
+	<link rel="stylesheet" type="text/css" href="css/kap_7_5.css">
+	<title> Menyer </title>
+</head>
+<body>
+	<h1> Ulike måter å lage menyer på </h1>
+	<p> Det finnes flere ting man kan ta utgangspunkt i for å lage en god meny for et nettsted: lister, tabeller eller div-elementer. Læreboka gjennomgår listemenyer, vi kommer til å lage menyer med utgangspunkt i både lister, tabeller og div-elemeter. <br>
+	Menyen kan enten være vannrett eller loddrett orientert. Vi tar for oss vannrette menyer først: </p>
+	<h1> Vannrett meny med liste </h1>
+	<p> Denne var vi gjennom forrige time: </p>
+	<ul id="menyliste">
+		<li> <a href="#"> Listepunkt </a></li>
+  		<li> <a href="#"> Listepunkt </a></li>
+  		<li> <a href="#"> Listepunkt </a></li>
+  	</ul>
+
+ 	<p> I html:<br>
+ 	&nbsp;&nbsp; < ul id="menyliste" ><br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < li > < a href="#" > Listepunkt < /a > < /li ><br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < li > < a href="#" > Listepunkt < /a > < /li ><br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < li > < a href="#" > Listepunkt < /a > < /li ><br>
+  	&nbsp;&nbsp; < /ul ><br><br>
+ 	I css: <br>
+  	&nbsp;&nbsp; #menyliste li {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; list-style-type: none;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; background-color: #00868B; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; color: #E5FAFB; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; width: 120px; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; margin: 3px; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; padding: 2px; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; text-align: center; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; border-radius: 10px; /* for å runde av hjørnene */ <br>
+   	&nbsp;&nbsp;&nbsp;&nbsp; display: inline; <br>
+	&nbsp;&nbsp; }<br><br>
+	&nbsp;&nbsp; #menyliste li a, #menyliste li a:visited{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: #E5FAFB;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; text-decoration: none;<br>
+	&nbsp;&nbsp; }<br><br>
+	&nbsp;&nbsp; #menyliste li a:hover{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: #A1C8C8;<br>
+	&nbsp;&nbsp; } </p>
+
+	<h1> Vannrett meny med tabell </h1>
+	<p> Når vi lager en tabell med lenker, vil denne kun ha en rad. Vi kan velge å ha tomme celler mellom lenkene for at det skal se mer oversiktlig ut. </p>
+	<table id="lenketabell">
+		<tr> <td class="tom"> </td> <td class="lenkecelle"> <a href="#"> Lenke </a> </td> <td class="tom"> </td> <td class="lenkecelle"> <a href="#"> Lenke </a> </td> <td class="tom"> </td> <td class="lenkecelle"> <a href="#"> Lenke </a> </td> <td class="tom"> </td> <td class="lenkecelle"> <a href="#"> Lenke </a> </td> <td class="tom"> </td></tr>
+	</table>
+
+	<p> I html: <br>
+	&nbsp;&nbsp;  < table id="lenketabell" ><br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < tr ><br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < td class="tom" > < /td > <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < td class="lenkecelle" > < a href="#" > Lenke < /a > < /td > <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < td class="tom" > < /td > <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < td class="lenkecelle" > < a href="#" > Lenke < /a > < /td ><br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < td class="tom" > < /td > <br> 
+	&nbsp;&nbsp;&nbsp;&nbsp; < td class="lenkecelle" > < a href="#" > Lenke < /a > < /td > <br> 
+	&nbsp;&nbsp;&nbsp;&nbsp; < td class="tom" > < /td > <br> 
+	&nbsp;&nbsp;&nbsp;&nbsp; < td class="lenkecelle" > < a href="#" > Lenke < /a > < /td > <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < td class="tom" > < /td ><br>
+	 &nbsp;&nbsp;&nbsp;&nbsp; < /tr ><br>
+	&nbsp;&nbsp; < /table ><br><br>
+
+	I css: <br>
+	&nbsp;&nbsp; #lenketabell{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 90%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; margin-left: 5%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; height: 80px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; border: none;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; .tom{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; border: none;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 4%;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; .lenkecelle{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 20%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; text-align: center;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; background-color: #00868B;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; color: #E5FAFB;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; border: none;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; border-radius: 20%;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; .lenkecelle a, .lenkecelle a:visited{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: #E5FAFB;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; text-decoration: none;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;.lenkecelle a:hover{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: #A1C8C8;<br>
+	&nbsp;&nbsp; }</p>
+
+	<h1> Vannrett meny med div </h1>
+	<p> Menyer med div-elementer likner mye på tabellmenyer, bortsett fra at vi lar "< tr >" erstattes med en ytre < div > og "< td >" erstattes med indre div-elementer: </p>
+	<div id="menyrad">
+		<div class="tomDiv"> </div> 
+		<div class="menyDiv"> <a href="#"> Lenke </a> </div> 
+		<div class="tomDiv"> </div> 
+		<div class="menyDiv"> <a href="#"> Lenke </a> </div> 
+		<div class="tomDiv"> </div> 
+		<div class="menyDiv"> <a href="#"> Lenke </a> </div> 
+		<div class="tomDiv"></div>
+	</div>
+
+	<p> I html: <br>
+	&nbsp;&nbsp; < div id="menyrad" > <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;< div class="tomDiv" > < /div > <br>
+	&nbsp;&nbsp; < div class="menyDiv"> < a href="#" > Lenke < /a > < /div > <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;< div class="tomDiv" > < /div > <br>
+	&nbsp;&nbsp; < div class="menyDiv"> < a href="#" > Lenke < /a > < /div > <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;< div class="tomDiv" > < /div > <br>
+	&nbsp;&nbsp; < div class="menyDiv"> < a href="#" > Lenke < /a > < /div > <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;< div class="tomDiv" > < /div > <br>
+	&nbsp;&nbsp; < /div ><br><br>
+
+	I css: <br>
+	&nbsp;&nbsp; #menyrad{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; height: 80px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 90%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; margin-left: 5%;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; .tomDiv{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 6%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; display: inline-block; /* må bruke inline-block for å kunne endre høyde og bredde*/<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; .menyDiv{	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; height: 78px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 24%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; display: inline-block;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; line-height: 78px; /* for å sentrere teksten */<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; text-align: center;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; background-color: #00868B;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; color: #E5FAFB;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; font-size: 20px;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; border-radius: 15px;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; .menyDiv a, .menyDiv a:visited{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; background-color: #00868B;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; color: #E5FAFB; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; text-decoration: none;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; .menyDiv a:hover{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: #A1C8C8;<br>
+	&nbsp;&nbsp; }</p>
+
+	<h1> Loddrett meny med liste </h1>
+	<p> Lages på samme måte som vannrett meny med liste, men her utelater vi <br>
+	&nbsp;&nbsp; display: inline; </p>
+
+	<h1> Loddrett meny med tabell </h1>
+	<p> Lages på samme måte som vannrett meny med tabell, men vi får kun et < td > i hver rad, og mange < tr > </p>
+
+	<h1> Loddrett meny med div </h1>
+	<p> Lages på samme måte som vannrett meny med div, men her trenger vi ikke skrive <br>
+		&nbsp;&nbsp; display: inline-block; </p>
+
+	<h1> Generelt om loddrette menyer </h1>
+	<p>Dersom vi ønsker innhold ved siden av div'en, må vi passe på at den ytre div'en har display: inline-block: <br>
+
+	<div id ="ramme">
+		<div id="loddrettMeny">
+			<p> Legger inn div-elementer for hver lenke </p>
+		</div>
+		<div id="siden">
+			<p> Legger inn alt innhold på siden </p>
+		</div>
+	</div>
+
+	<p> I html: <br>
+	&nbsp;&nbsp; < div id ="ramme" ><br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < div id="loddrettMeny" ><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Legger inn menyen <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < /div ><br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < div id="siden" ><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Legger inn alt innhold på siden<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < /div ><br>
+	&nbsp;&nbsp; < /div ><br><br>
+
+	I css:<br>
+	&nbsp;&nbsp; #ramme{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 100%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; height: 300px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; border: 1px solid black;<br>
+	&nbsp;&nbsp;}<br>
+	&nbsp;&nbsp; #loddrettMeny{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; display: inline-block;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 29%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; height: 300px;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; #siden{<br>
+	&nbsp;&nbsp; display: inline-block;<br>
+	&nbsp;&nbsp; width: 70%;<br>
+	&nbsp;&nbsp; height: 300px;<br>
+	&nbsp;&nbsp; }</p>
+
+	<h1> Utfordringer med tabell og div </h1>
+	<p> På de fleste områder kommer vi lenger med å lage menyer med tabeller eller div. Ulempen med dette er at kun lenketeksten fungerer som lenke, ikke hele boksen. Dette kan vi  med div-elementer ordne med å bytte rekkefølge på < div > og < a >:</p>
+	<div class="menyDiv"> <a href="#"> Lenke </a> </div>
+	<a href="#"> <div class="menyDiv"> Lenke  </div> </a>
+
+	<p>
+	&nbsp;&nbsp; < div class="menyDiv" > < a href="#" > Lenke < /a > < /div ><br>
+	&nbsp;&nbsp; < a href="#" > < div class="menyDiv" > Lenke  < /div> < /a ></p>
+
+	<h2>Konklusjon: det er ofte best å lage menyer med div-elementer, her kan vi kontrollere det vi vil.</h2>
+
+	<h1> Oppgaver </h1>
+	<p> 1. Lag en vannrett meny med 4 lenker. Du "velger selv" metode. Menyen skal stilsettes i css slik at f.eks. skriftfarge, bakgrunnsfarge, padding og musepeker endres ved hover og active  <br>
+	2. Lag en loddrett meny med 6 lenker. Du "velger selv" metode. Menyen skal stilsettes i css slik at f.eks. skriftfarge, bakgrunnsfarge, padding og musepeker endres ved hover og active </p>
+
+	<div id="venstre">
+		<img src="media/divSideVannrett.png" width="90%">
+		<img src="media/divSideLoddrett.png" width="90%">
+	</div>
+	<p id="hoyre"> Ekstra: Start en ny html-fil som du kaller mal.html eller liknende. I denne fila skal du lenke til css-fila mal.css. Legg til i html:<br>
+	&nbsp;&nbsp; Et div-element som ligger rundt alt innholdet på siden. Gi det iden "ramme" eller liknende.<br>
+	&nbsp;&nbsp; Et div-element med tekst i som fungerer som en header. <br>
+	&nbsp;&nbsp; En meny, enten med vannrett utseende eller loddrett utseende <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; (lag gjerne begge muligheter og kommenter ut en av dem)<br>
+	&nbsp;&nbsp; Et div-element med iden "innhold" eller liknende. <br>
+	&nbsp;&nbsp; I denne kan du prøve deg frem med å legge inn ulikt html-innhold. <br>
+	I css-fila legger du til stilsetting for de ulike div-elementene og kommenterer hva hver enkelt egenskap har å si for resultatet (se på oppgaven som en mal som inneholder alt du vil få bruk for til nettsider videre i faget)</p>	
+
+</body>
+</html>

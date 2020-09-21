@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Kap 6.2 og 7.4: lenker </title>
+        <link rel="stylesheet" type="text/css" href="undervisning.css">
+        <link rel="stylesheet" type="text/css" href="kap_6_2.css">
+  </head>
+  <body>
+  <h1> Kap 6.2 og 7.4: lenker </h1>
+  <p> Lenker er svært sentralt i nettsider: Det er det som knytter hele nettet sammen. HTML = hypertext markup language, og nettopp hyperteksten er lenkene. Lenker kan enten lede deg til eksterne nettsider, eller knytte sammen ulike sider på ett og samme nettsted. <br><br>
+
+  En lenke angis med taggen < a > < /a >. I starttaggen legger vi attributtene href, der adressen til siden ligger, og target, som sier noe om hvordan siden skal åpnes. <br>
+  &nbsp;&nbsp; < a href="https://oslo-katedral.vgs.no/" target = "_blank" >Oslo katedralskole < /a > <br>
+  er koden for å linke til kattas side der siden åpnes i en ny fane: <br>
+  <a href="https://oslo-katedral.vgs.no/" target = "_blank">Oslo katedralskole </a> <br><br>
+
+  Dette er en absolutt lenke. <br>
+  Vi kan også lenke til interne nettsteder, dette kalles relative lenker: <br>
+  &nbsp;&nbsp; < a href = "kap_6_4.html" target =  "_blank">Bilder< /a > <br>
+  er koden for å linke til min egen html-fil. Pass på filplassering her akkurat som i css-filer!<br>
+  <a href = "kap6_1.html" target =  "_blank">Lister </a> </p>
+
+	<h1> Stilsetting av lenker </h1>
+	<p> I tillegg til vanlig stilsetting, kan vi for lenker skille mellom utseende for sider som er besøkt vs ikke besøkt, samt stilsetting når musepekeren hovrer over: <br>
+	&nbsp;&nbsp;  a{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; /* stilsetting som gjelder for lenker generelt */<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; a:link{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; /* stilsetting som gjelder for sider som ikke er besøkt (samme som a{})<br>
+	&nbsp;&nbsp;  }	<br>
+	&nbsp;&nbsp; a:visited{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; /* stilsetting som gjelder når siden er besøkt<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; a:hover{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; /* stilsetting som gjelder når musepekeren hovrer over */<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; a:active{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; /* stilsetting som gjelder når lenken klikkes på */<br>
+	&nbsp;&nbsp; }</p>
+
+	<h2> Eksempel med stilsetting av lenker </h2>
+	<p> <a id="kattalink" href = "https://oslo-katedral.vgs.no/" target = "_blank"> Oslo katedralskole </a><br>
+	&nbsp;&nbsp; < a id="kattalink" href = "https://oslo-katedral.vgs.no/" target = "_blank" > Oslo katedralskole < /a ><br><br>
+	I css:<br>
+	&nbsp;&nbsp; #kattalink{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: #34aac1;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; text-decoration: underline;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; #kattalink:visited{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: #c134aa;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; text-decoration: underline;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; #kattalink:hover{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: #aac134;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; text-decoration: line-through;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; cursor: pointer;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; #kattalink:active{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: #c14b34;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; text-decoration: none;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; cursor: no-drop;<br>
+	&nbsp;&nbsp; }<br>
+
+  <h1> Lenker i annet enn tekst </h1>
+  <p> < a > < /a > er ikke bare noe vi legger inn i tekst: tabellceller, listeelementer, bilder osv. kan også lenke videre. Dette fungerer på akkurat samme måte som for vanlig tekst: <br>
+
+  &nbsp;&nbsp; < a href =  "sidedetlinkestil.no" target = "_blank">  < img = "bildefil.jpeg" > < /a > </p>
+
+  <a href="https://vektlofting.klubb.nif.no/Sider/Hjem.aspx" target="_blank"> <img src="media/rykk.jpeg"> </a>
+
+
+  <p> Her er koden for bildet følgende: <br>
+  &nbsp;&nbsp; 	< a href="https://vektlofting.klubb.nif.no/Sider/Hjem.aspx"> < img src="media/rykk.jpeg" > < /a> </p>
+
+  <h2> Oppgaver </h2>
+  <p> 1. I læreboka på side 55: oppgave 6.3 til 6.6 <br>
+  <img src="media/oppg55.png" width="70%"><br>
+  2. I læreboka på side 71: oppgave 7.8 og 7.9 <br>
+  <img src="media/oppg71.png" width="70%"><br>
+  3. Lag en side der du legger inn både absolutte og relative lenker. Lenkene skal være tekst, bilder og listeelementer. <br>
+  Stilsett lenkene slik at de er ulike når siden er besøkt, hover og aktiv.</p>
+
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Kap 6.1 og 7.2: lister </title>
+        <link rel="stylesheet" type="text/css" href="undervisning.css">
+        <link rel="stylesheet" type="text/css" href="kap_6_1.css">
+  </head>
+  <body>
+  	<h1> Kap 6.1 og 7.2: lister </h1>
+  	<p> Lister i html har to funksjoner: å kunne liste opp informasjon, og å være en basis for menyer i html. I html forholder vi oss til to typer lister: nummererte og unummererte lister </p>
+  	<h2> Nummererte lister </h2>
+  	<p> Taggen for nummerete lister er < ol > (ordered list), der hvert listeelement omgis av < li > < /li >: <br>
+  		&nbsp;&nbsp; < ol > <br>
+  		&nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt 1 < /li ><br>
+  		&nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt 2 < /li ><br>
+  		&nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt 3 < /li ><br>
+  		&nbsp;&nbsp; < /ol ><br>
+  		<ol>
+  			<li> Listepunkt 1 </li>
+  			<li> Listepunkt 2 </li>
+  			<li> Listepunkt 3 </li>
+  		</ol>
+  		<p> I css kan vi, i tillegg til å endre farger, skriftstiler, størrelser osv. endre nummereringstype: <br>
+  		&nbsp;&nbsp; ol li {<br>
+    	&nbsp;&nbsp;&nbsp;&nbsp; list-style-type:lower-roman;<br>
+		&nbsp;&nbsp; }<br>
+		Ulike typer finner dere her: <a href="https://www.w3schools.com/cssref/pr_list-style-type.asp">w3schools</a> <br><br>
+		Det går an å endre enkeltlister ved å gi dem en id som ellers: </p>
+		<ol id="liste1">
+			<li> Listepunkt 1 </li>
+  		<li> Listepunkt 2 </li>
+  		<li> Listepunkt 3 </li>
+  	</ol>
+
+		<p>
+		&nbsp;&nbsp; < ol id="liste1" > <br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt 1 < /li ><br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt 2 < /li ><br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt 3 < /li ><br>
+  	&nbsp;&nbsp; < /ol ><br><br>
+
+  	I css defineres da<br>
+  	&nbsp;&nbsp; #liste1 li {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; list-style-type:lower-roman;<br>
+		&nbsp;&nbsp; }</p>
+
+		<h2> Unummererte lister </h2>
+		<p> Taggen for unummererte lister er < ul > (uordered list), der hvert listeelement fortsatt omgis av < li > < /li >: <br>
+  	&nbsp;&nbsp; < ul > <br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt < /li ><br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt < /li ><br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt < /li ><br>
+  	&nbsp;&nbsp; < /ul ></p>
+
+  	<ul>
+		  <li> Listepunkt </li>
+  		<li> Listepunkt </li>
+  		<li> Listepunkt </li>
+  	</ul>
+
+    <p> Her kan vi også endre listepunkt til for eksempel firkanter <br>
+    &nbsp;&nbsp; < ul id="liste2" > <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt 1 < /li ><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt 2 < /li ><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; < li > Listepunkt 3 < /li ><br>
+    &nbsp;&nbsp; < /ul ><br><br>
+
+    I css defineres da<br>
+    &nbsp;&nbsp; #liste2 li {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; list-style-type: square;<br>
+    &nbsp;&nbsp; }</p>
+
+    <ul id="liste2">
+  		<li> Listepunkt 1 </li>
+    	<li> Listepunkt 2 </li>
+    	<li> Listepunkt 3 </li>
+    </ul>
+
+    <h2> Oppgaver </h2>
+    <p> 1. I læreboka på side 54: oppgave 6.1 og 6.2 <br>
+      <img src="media/oppg54.png" width="70%"><br>
+      2. I læreboka på side 68: oppgave 7.4 og 7.5. Du kan bruke w3schools til å finne ulike verdier for listetypene. </p>
+      <img src="media/oppg68.png" width="70%"><br>
+
+  </body>
+</html>

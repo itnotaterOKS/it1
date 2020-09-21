@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Kap 6.5, 6.6: video og lyd </title>
+        <link rel="stylesheet" type="text/css" href="undervisning.css">
+  </head>
+  <body>
+  	<h1> Kap 6.5, 6.6: video og lyd</h1>
+  	<h1> Video </h1>
+  	<p> Taggen for å legge til video er < video > < /video>, mens selve filmen legges inn i < source >: på samme måte som < figure > og < img > for bilder: <br>
+  	&nbsp;&nbsp; < video > <br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < source src = "filnavn.filendelse" type = "video/mp4"> <br>
+  	&nbsp;&nbsp; < /video > <br><br>
+  	I tillegg til src og type har vi andre attributter det kan være aktuelt å inkludere:<br>
+  	&nbsp;&nbsp; autoplay - sørger for at filmen spilles automatisk når siden lates <br>
+  	&nbsp;&nbsp; controls - legger inn play/pause/lyd <br>
+  	&nbsp;&nbsp; width eller height - styrer størrelsen <br>
+  	&nbsp;&nbsp; loop - gjentar avspilling <br>
+  	&nbsp;&nbsp; muted - starter uten lyd <br> <br>
+  	Så vi kan f.eks. legge ut en film som spiller automatisk, ikke har kontroller og looper:<br>
+  	&nbsp;&nbsp; < video width="1200px" autoplay loop ><br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < source src="media/flikkflakk.mp4" type="video/mp4" ><br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; Din nettleser støtter ikke videoelementet<br>
+  	&nbsp;&nbsp; < /video ><br>
+  	</p>
+  	<video width="1200px" autoplay loop muted controls>
+  	<source src="media/turn_1.mp4" type="video/mp4">
+  		Din nettleser støtter ikke videoelementet
+  	</video>
+
+  	<h1> Legge til egne filmer </h1>
+  	<p> Når vi legger til filmer som ligger på egen maskin, må vi passe på filadressen som vanlig. Av hensyn til den som bruker siden, legger vi på controls. Dersom vi ikke spesifiserer annet, legges filmene inline (ved siden av hverandre). </p>
+  	<video width="400px" controls>
+  	<source src="media/turn_3.mp4" type="video/mp4">
+  		Din nettleser støtter ikke videoelementet
+  	</video>
+  	<br>
+
+  	<video width="300px" controls>
+  		<source src="media/ulla_ulrikke_2.mp4" type="video/mp4">
+  		Din nettleser støtter ikke videoelementet
+  	</video>
+  	<video width="300px" controls>
+  		<source src="media/ulla_ulrikke_3.mp4" type="video/mp4">
+  		Din nettleser støtter ikke videoelementet
+  	</video>
+  	<video width="300px" controls>
+  		<source src="media/theo_3.mp4" type="video/mp4">
+  		Din nettleser støtter ikke videoelementet
+  	</video>
+
+  	<h1> Legge til youtube-filmer </h1>
+  	<p> I html har vi mulighet til å legge til youtubefilmer direkte i stedet for kun å legge ut en link til filmen: <br><img src="media/youtube_1.png" width="300px"> <img src="media/youtube_2.png" width="300px"><br>
+  	Resultatet blir da</p>
+  	&nbsp;&nbsp; < iframe width="560" height="315" src="https://www.youtube.com/embed/n1ZOv90AytQ" frameborder="0" allowfullscreen >< /iframe ><br>
+  	<iframe width="560" height="315" src="https://www.youtube.com/embed/n1ZOv90AytQ" frameborder="0" allowfullscreen></iframe>
+    <p> (Så kan vi bli sinte på alle som filmer i stående format....) </p>
+
+  	<h1> Lyd  </h1>
+  	<p> Taggen for å legge til lyd er < audio > og brukes, som film, sammen med < source > for å sette inn lydfiler: <br>
+    &nbsp;&nbsp; < audio controls > <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; < source src="media/Beatles_Twist_and_Shout.mp3" type = "audio/mpeg"> <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; Din nettleser støtter ikke audioelementet <br>
+    &nbsp;&nbsp; < /audio ><br>
+
+   	<audio autoplay controls>
+  	<source src="media/Beatles_Twist_and_Shout.mp3" type = "audio/mpeg">
+    Din nettleser støtter ikke audioelementet
+    </audio>
+
+    <h2> Oppgaver </h2>
+    <p> 1. Fortsett på nettsiden du lagde med bilder. <br>
+    a) Sett inn en film. Hvis du ikke har noen liggende på pcen din kan du finne både filmer og lydklipp <a href="https://www.lokus.no/open/informasjonsteknologi_1/Mer-om-HTML">her</a> <br>
+    b) Bygg inn en film du finner på youtube <br>
+    c) Sett inn et lydklipp. Undersøk hva som skjer hvis du prøver å sette inn attributtet autoplay for lydfilen og hva som skjer hvis du ikke legger ved controls. </p>
+  </body>
+</html>

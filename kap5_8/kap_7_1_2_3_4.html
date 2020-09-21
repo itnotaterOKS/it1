@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="undervisning.css">
+	<link rel="stylesheet" type="text/css" href="kap_7_1_2_3_4.css">
+	<title> Mer css </title>
+</head>
+<body>
+	<h1> Oppsummering: viktige CSS-egenskaper </h1>
+    <p> Tabellen under viser de viktigste css-egenskapene vi har vært gjennom så langt: </p>
+  	<h2> Tabell over noen viktige css-egenskaper </h2 >
+  	<table>
+      <tr> <th> Egenskap </th> <th> Kommentar </th> <th> Eksempel </th> </tr>
+      <tr> <td> color </td> <td> Skriftfarge</td> <td> color: #1C3C50; &nbsp;&nbsp; color: red; </td> </tr>
+      <tr> <td> background-color</td> <td> Bakgrunnsfarge </td> <td> background-color: #1C3C50; &nbsp;&nbsp; background-color: red; </td> </tr>
+      <tr> <td> border </td> <td> Kantlinje </td> <td> border: 1px solid black; </td> </tr>
+      <tr> <td> border-collapse </td> <td> Kantlinje-overlapp </td> <td> border-collapse: collapse; </td> </tr>
+      <tr> <td> font-family </td> <td> Skrifttype i prioritert rekkefølge</td> <td> font-family: "Century Gothic", arial, sans-serif</td> </tr>
+      <tr> <td> font-size </td> <td> Skriftstørrelse </td> <td> font-size: 150%; &nbsp;&nbsp; font-size: 16px;</td> </tr>
+      <tr> <td> font-weight </td> <td> Tykkelse </td> <td> font-weight: bold; &nbsp;&nbsp; font-weight: 500; </td> </tr>
+      <tr> <td> font-style </td> <td> Kursiv etc. </td> <td> font-style: italic;</td> </tr>
+      <tr> <td> width </td> <td> Bredden på f.eks. et bilde</td> <td>  width: 50%;&nbsp;&nbsp; width: 550px; </td> </tr>
+      <tr> <td> height </td> <td> Høyden på f.eks. et bilde </td> <td> height: 50%;&nbsp;&nbsp; height: 550px; </td> </tr>
+      <tr> <td> margin </td> <td> Avstand til andre elementer (top-right-bottom-left) </td> <td> margin: 10px; &nbsp;&nbsp; margin-left: 10px; &nbsp;&nbsp; margin: 10px auto 10px 20px</td> </tr>
+      <tr> <td> padding </td> <td> Avstand til kantlinje </td> <td> padding: 5px; &nbsp;&nbsp; padding-left: 5px; &nbsp;&nbsp; padding: 2px auto 2px auto </td> </tr>
+      <tr> <td> display </td> <td> Hvordan elementet skal vises</td> <td> display: block; &nbsp;&nbsp; display: inline; &nbsp;&nbsp; display: flex; </td> </tr>
+    </table>
+		
+    <p> Angående display: noen elementer er naturlig block: listeelementer, < p >, tabeller osv. Andre er naturlig inline: f.eks. <  img > og lenker. Å bruke display vil overstyre dette: <br>
+    I html:<br>
+    &nbsp;&nbsp; < p id="inlineP"> Tekst jeg ønsker skal være inline < /p > <br>
+    &nbsp;&nbsp; < p id="inlineP"> legges ved siden av og ikke under < /p >  <br>
+    I css:<br>
+    &nbsp;&nbsp; #inlineP{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; display: inline; <br>
+    &nbsp;&nbsp; }  <br>
+    Resultat:
+    </p>
+    <p id="inlineP"> Tekst jeg ønsker skal være inline </p>
+    <p id="inlineP"> legges ved siden av og ikke under </p>
+
+    <h2> Oppgave </h2>
+    <p> Start et nytt html-dokument med tilhørende css-dokument. <br>
+    	1. Legg til tekst som du i css stilsetter til inline <br>
+    	2. Legg til lenker som du i css stilsetter til block <br>
+    	3. Legg til en liste der du tar bort kulepunktene og der du setter li-elementene til inline <br>
+    </p>
+
+    <h1> Stilsetting av lister </h1>
+    <p> I tillegg til å endre listepunktene, skriftfargen og skrifttypen til en lenke kan vi med videre css bruke lister som et godt utgangspunkt for menyer: <br>
+
+	<ul id="menyliste">
+		<li> Listepunkt </li>
+  		<li> Listepunkt </li>
+  		<li> Listepunkt </li>
+  	</ul>
+
+ 	<p> I css: <br>
+  	&nbsp;&nbsp; #liste2 li {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; list-style-type: none;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; background-color: #00868B; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; color: #E5FAFB; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; width: 120px; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; margin: 3px; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; padding: 2px; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; text-align: center; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; border-radius: 10px; /* for å runde av hjørnene */ <br>
+	&nbsp;&nbsp; }<br>
+
+	Dersom man ønsker en vannrett meny legger man til <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; display: inline; </p>
+
+	<h1> Tabeller og lenker </h1>
+	<p> Har vi i grunn jobbet nok med, spesielt i innleveringen.  </p>
+
+	<h1> Oppgaver: </h1>
+	<p> s. 66: 7.1, 7.2<br>
+		Lag to lister, en nummerert og en unummerert. Endre for begge to listepunkttype samt bakgrunn, border-radius, skrift og størrelse slik at de fremstår som en meny. Du velger selv om menyen skal være loddrett eller vannrett.<br>
+		s. 68: 7.5 <br>
+		Lag en ny liste. Som innhold i listene legger du lenker. Dersom du vil ha en tom lenke, skriver du < a href = "#" > Lenke < /a >. Bruk css til å gi listeelementene ulik stil for link, visited, hover og active. <br>Stilsettingen skal minst inneholde egenskapene <br>
+		&nbsp;&nbsp; list-style-type, width, background-color, color, border-radius, margin, padding</p>
+
+		<img src="media/divSide.png" width ="35%">
+		<p id="hoyre"> Ekstra: Start en ny html-fil som du kaller mal.html eller liknende. I denne fila skal du lenke til css-fila mal.css. Legg til i html:<br>
+		&nbsp;&nbsp; Et div-element som ligger rundt alt innholdet på siden. Gi det iden "ramme" eller liknende.<br>
+		&nbsp;&nbsp; Et div-element med tekst i som fungerer som en header. <br>
+		&nbsp;&nbsp; Et div-element med iden "innhold" eller liknende. <br>
+		&nbsp;&nbsp; I denne kan du prøve deg frem med å legge inn ulikt html-innhold. <br>
+		I css-fila legger du til stilsetting for de ulike div-elementene og kommenterer hva hver enkelt egenskap har å si for resultatet (se på oppgaven som en mal som inneholder alt du vil få bruk for til nettsider videre i faget)</p>
+</body>
+</html>

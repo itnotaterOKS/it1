@@ -1,0 +1,18 @@
+#kattalink{
+	color: #34aac1;
+	text-decoration: underline;
+}
+#kattalink:visited{
+	color: #c134aa;
+	text-decoration: underline;
+}
+#kattalink:hover{
+	color: #aac134;
+	text-decoration: line-through;
+	cursor: pointer;
+}
+#kattalink:active{
+	color: #c14b34;
+	text-decoration: none;
+	cursor: no-drop;
+}

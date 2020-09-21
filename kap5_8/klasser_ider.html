@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <title> Klasser og ider </title> 
+        <link rel="stylesheet" type="text/css" href="css/undervisning.css">
+        <link rel="stylesheet" type="text/css" href="css/klasser_ider.css">
+  </head>
+  <body>
+  	<h1> Hva bruker vi klasser/ider til? </h1>
+  	<p> Det er ikke alltd vi ønsker å endre alle elementer av samme type i css: <br>
+  	Ikke alle < p >, ikke alle < img >, ikke alle < h2 > osv. <br>
+  	For å endre kun én av dem må vi gjøre den unik. Det gjør vi ved å tilordne den en identifikasjon, enten en klasse eller id. <br>
+  	Tilordningen skjer i taggen: f.eks. ved < h1 id="overskrift 1"> Overskrift < /h1 >. Stilsettingen for denne i css gjøres da ved å kalle en id med #: <br><br>
+  	&nbsp;&nbsp; #overskrift1{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; color: red;<br>
+  	&nbsp;&nbsp; }<br><br>
+
+  	Tilsvarende brukes klasser, ved < h1 class="overskrifter" > Overskrift < /h1 >. Stilsettingen for klasser i css gjøres ved å kalle klassen med .: <br><br>
+  	&nbsp;&nbsp; .overskrifter{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; font-size: 150%; <br>
+  	&nbsp;&nbsp; }<br></p>
+  	
+  	<h2> Klasse eller id? </h2>
+  	<p>  Hovedreglen er at vi bruker klasser dersom det tilhører flere elementer, f.eks. alle overskrifter, alle bilder osv. Id bruker vi dersom det bare er én: dersom en enkelt tabellcelle skal være gul, ett enkelt avsnitt i kursiv osv. <br>
+  	Dersom du er usikker: bruk kun en av dem. </p>
+
+  	<h2> Kan et element ha både klasse og id? </h2>
+  	<p> JA! Og det kan være en hensiktsmessig bruk av klasser og ider: Vi bruker klasser for å sette alle overskrifter til større størrelse og ider for å gi enkeltoverskrifter farge: <br><br>
+
+  	I html: <br>
+  	&nbsp;&nbsp; < h1 > Overskrift uten noen stilsetting < /h1 > <br>
+  	&nbsp;&nbsp; < h1 class="overskrift" id="over1" > Overskrift 1 < /h1 > <br>
+  	&nbsp;&nbsp; < h2 class="overskrift" id="over2" > Overskrift 1 < /h2 > <br>
+  	&nbsp;&nbsp; < h2 class="overskrift" id="over3" > Overskrift 1 < /h2 > <br>
+  	
+    I css: <br>
+  	&nbsp;&nbsp; .overskrift{<br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; font-size: 300%;<br>
+	  &nbsp;&nbsp; }<br>
+	  &nbsp;&nbsp; #over1{<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp; color: red;<br>
+	  &nbsp;&nbsp; }<br>
+	  &nbsp;&nbsp; #over2{<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp; color: green;<br>
+	  &nbsp;&nbsp; }<br>
+	  &nbsp;&nbsp; #over3{<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp; color: blue;<br>
+	  &nbsp;&nbsp; }<br><br>
+  	
+    Resultatet blir da: </p>
+  	<h1> Overskrift uten noen stilsetting </h1>
+  	<h1 class="overskrift" id="over1"> Overskrift 1 </h1>
+  	<h1 class="overskrift" id="over2"> Overskrift 2 </h1>
+  	<h1 class="overskrift" id="over3"> Overskrift 3 </h1>
+  </body>
+</html>

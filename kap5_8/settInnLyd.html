@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> lydfil </title>
+</head>
+<body>
+	<h2> Spille av lyd ved hendelser </h2>
+	<ol> 
+		<li> Lager et html-element som skrur på lyden (tekstelement for eksempel) </li>
+		<li> Sett inn lydelementet uten < source >-tag og med tom src="" </li>
+		<li> Gi klikkelementet en onclick-funksjon </li>
+		<li> I denne funksjonen legges kilden til audio-elementet </li>
+	</ol>
+	<audio id="lyd" src="" autoplay> </audio>
+
+	<p onclick="lydFunksjon()">KLIKK HER!!!</p>
+	
+	<script>
+		// alt som står her er javascript-kode, altså it-2-mat. Denne måten å legge til lyd på burde likevel gi mening.
+		function lydFunksjon(){
+			lydEl = document.querySelector("#lyd");// henter audioelementet
+			lydEl.src="media/sommervind.mp3";//legger til kilde til audioelementet, nå vil den spilles av
+		}
+	</script>
+</body>
+</html>
