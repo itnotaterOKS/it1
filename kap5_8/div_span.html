@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <title> Div og span </title> 
+        <link rel="stylesheet" type="text/css" href="css/undervisning.css">
+        <link rel="stylesheet" type="text/css" href="css/div_span.css">
+  </head>
+  <body>
+
+  	<div id="header">
+  		<h1> Div og span </h1>
+  	</div>
+
+  	
+  	<p> Taggene < div > og < span > gir oss muligheten til å strukturere koden vår i ulike deler, noe som både letter stilsetting i css. < div > og < span > er i utgangspunktet ikke annet enn tomme bokser, dog med noe ulikt bruksområde: <p>
+  		<div class="tomDiv">
+  			<!--<p> Tomt div-element </p>-->
+  		</div>
+  		<p>Div legges som en boks rundt elementer, mens <span class="tomSpan">span</span> kan brukes til formatere deler av tekst</p>
+  	<div class="tomDiv">
+  		<p> Man kan også legge inn <span class="red">flere span</span> rundt teksten til <span class="blue">innhold i</span> en div</p>
+  	</div>
+
+  	<h1> Når får vi bruk for div? </h1>
+  	<p> Div-bokser brukes når vi skal strukturere ulikt innhold på en side, enten slik at det får likt utseende ved at de tilhører samme class/id eller ved å legge elementer vi vil plassere sammen i samme div slik at vi kan flytte diven i stedet for hvert element. <p>
+  	<h2> To eksempler på bruk av divs: </h2>
+  	<p> 1: jeg ønsker at de to tekstbitene skal ha samme bredde, skriftstørrelse, farge og kanskje bakgrunnsbilde?: </p>
+  	<div class="tekstdiv">
+  		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum elit id porta fermentum. Vestibulum sit amet lorem est. Vestibulum quis tellus et neque lacinia scelerisque vitae nec ipsum. In nec neque vitae metus commodo rhoncus ac vel ante. Vivamus tincidunt magna eu odio porttitor, eu aliquet ante egestas. Cras blandit ligula lacus, eget condimentum lacus blandit in. Curabitur tempus et elit quis feugiat. Phasellus eu tristique mauris. Donec nec eros quis metus malesuada bibendum. Maecenas sapien urna, interdum in urna ut, dictum porta elit. Phasellus id tempor mauris. Nam at elementum ligula. Aenean nec molestie magna, ut malesuada turpis. Sed nec ultrices nibh.</p>
+  	</div>
+  	<div class="tekstdiv">
+  		<p> Aenean vel posuere erat. Duis pharetra sapien in lobortis bibendum. Cras tempor malesuada felis mollis condimentum. Integer a suscipit tortor. Pellentesque justo lectus, convallis nec orci quis, malesuada vulputate tortor. Donec sagittis sed quam nec facilisis. Praesent tincidunt, odio in efficitur venenatis, velit tellus malesuada enim, eget fringilla erat odio eu ante. Nam quis leo interdum, suscipit ligula at, feugiat dui. Quisque porttitor semper venenatis. Fusce sit amet aliquet lacus. Nunc eleifend metus ut metus aliquam iaculis. Nulla sed facilisis enim, nec ullamcorper sem. Morbi nibh velit, ultricies vitae posuere sit amet, tempor vehicula ante. </p>
+  	</div>
+
+  	<p> html-koden: <br>
+  	&nbsp;&nbsp; < div class="tekstdiv"><br>
+  	&nbsp;&nbsp;&nbsp;&nbsp; < p> tekst < /p><br>
+  	&nbsp;&nbsp; < /div><br><br>
+
+  	css-koden: <br>
+	&nbsp;&nbsp; .tekstdiv{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width:70%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; color: orange;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; border: 2px solid green;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; margin-top: 2px;<br>
+	&nbsp;&nbsp; }`<br> <br>
+
+	Dette kan brukes når vi lager header. </p>
+
+	<p> 2: jeg ønsker å flytte på et bilde og en liste sammen <br>
+
+	<div class="sammensattdiv">
+	<img src="media/turn.jpg" alt="bilde?" width="100%">
+	<h3> Tre ting jeg liker å gjøre </h3>
+	<ol>
+		<li> Vektløfting </li>
+		<li> Turn </li>
+		<li> Korps </li>
+	</ol>
+	</div>
+
+	<p> html-koden: <br>
+	&nbsp;&nbsp; < div class="sammensattdiv"><br>
+	&nbsp;&nbsp; < img src="media/turn.jpg" alt="bilde?" width="100%"> <br>
+	&nbsp;&nbsp; < h3> Tre ting jeg liker å gjøre < /h3><br>
+	&nbsp;&nbsp; < ol><br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < li> Vektløfting < /li><br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < li> Turn < /li><br>
+	&nbsp;&nbsp;&nbsp;&nbsp; < li> Korps < /li><br>
+	&nbsp;&nbsp; < /ol><br>
+	&nbsp;&nbsp; < /div><br><br>
+
+	css-koden: <br>
+	&nbsp;&nbsp; .sammensattdiv{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; width: 30%;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; border: 2px solid green;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; float: right;<br>
+	&nbsp;&nbsp; }</p>
+  </body>
+</html>
