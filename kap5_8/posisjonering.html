@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Posisjonering med css</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="undervisning.css">
+    <link rel="stylesheet" type="text/css" href="posisjonering.css">
+    </head>
+    <body>
+    <p> Timen i dag dekker et tema som ikke er prioritert i boka, men som er veldig nyttig: å bruke css til å posisjonere elementer på nettsiden.</p>
+
+    <h1> Position </h1>
+    <p> Hva? <br>
+      Strukturerer posisjonen til et element på en nettside </p>
+    <p> Hvordan? <br>
+      Bruker egenskapen position, som kan ha ulike verdier </p>
+    <p> Minner i tillegg om at alle elementer enten har display: inline (ved siden av, f.eks. < img > og < span >) eller block (under, f.eks < li > og < div >)</p>
+    <table>
+      <tr><th> verdi </th> <th> beskrivelse </th></tr>
+      <tr><td> static </td> <td> default verdi, elementet følger rekkefølgen det legges i koden</td></tr>
+      <tr><td> absolute </td> <td> elementet ligger inne i et annet element, posisjonen justeres i forhold til dette </td></tr>
+      <tr><td> relative </td> <td> posisjonen sammenliknes med der det normalt ville vært plassert </td></tr>
+      <tr><td> fixed </td> <td> posisjonen bestemmes relativt til vinduet </td></tr>
+    </table>
+
+    <h2> Viser med div-bokser </h2>
+     <div class="ramme">
+          <div class="stat"> <p> static </p> </div>
+          <div class="abs"> <p> absolute </p> </div>
+          <div class="rel"> <p> relative </p> </div>
+          <div class="fix"> <p> fixed </p></div>
+      </div>
+      <p> Her har de ulike:  <br>
+      .ramme{ <br>
+      &nbsp;&nbsp; width: 500px; <br>
+      &nbsp;&nbsp; height: 300px; <br>
+      &nbsp;&nbsp; background-color: #F16699; <br>
+      &nbsp;&nbsp; margin: 20px auto; <br>
+      &nbsp;&nbsp; position: relative; <br>
+      } <br>
+      .ramme div{<br>
+      &nbsp;&nbsp; background-color: #EBF0F1;<br>
+      &nbsp;&nbsp; width: 80px;<br>
+      &nbsp;&nbsp; height: 80px;<br>
+      &nbsp;&nbsp;border: 1px solid black;<br>
+      }<br>
+      .stat{ <br>
+      &nbsp;&nbsp; position: static; <br>
+      } <br>
+      .abs{ <br>
+      &nbsp;&nbsp; position: absolute; <br>
+      &nbsp;&nbsp; left: 70px; <br>
+      &nbsp;&nbsp; top: 80px; <br>
+      } <br>
+      .rel{ <br>
+      &nbsp;&nbsp; position: relative; <br>
+      &nbsp;&nbsp; top: 100px; <br>
+      &nbsp;&nbsp; left: 50px; <br>
+      } <br>
+      .fix{ <br>
+      &nbsp;&nbsp; position: fixed; <br>
+      &nbsp;&nbsp; left: 0px; <br>
+      &nbsp;&nbsp; top: 150px; <br>
+      } </p>
+
+      <h2> Oppgaver: </h2>
+      <p>Lag et .html-side med følgende elementer: <br>
+      &nbsp;&nbsp; < div > <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; < h1 > Overskrift < /h1 > <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; < img > Sett selv inn et bilde < /img > <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; < table > Sett selv inn en tabell < /table > <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; < ul > Sett selv inn en liste < /ul > <br>
+      &nbsp;&nbsp; < /div> <br> <br>
+      Bestem plasseringene til elementene med de ulike egenskapene vist over, legg merke til hva som skjer når du endrer css-koden.
+      Gi gjerne elementene bakgrunnsfarge og/eller kantlinjer sånn at du ser hvor de starter og sluter. <br>
+      Hva skjer hvis du øker bredden på innpakningsdiven? <br>
+      Legg inn de samme verdiene for avstander (margin) og padding, men varier verdiene for position. Hva har position å si for resultatet? <br>
+      Hvis du er ferdig: se gjennom eksemplene på https://www.w3schools.com/cssref/pr_class_position.asp <br>
+      Legg inn posisjonering i stilsettingen av siden fra timen i går og endre plasseringer med utgangspunkt i dette.</p>
+
+  </body>
+</html>

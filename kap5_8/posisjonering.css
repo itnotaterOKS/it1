@@ -1,0 +1,34 @@
+body{
+	margin-left: 50px;
+}
+.ramme{
+	width: 500px;
+	height: 300px;
+	background-color: #F16699;
+	margin: 20px auto;
+	position: relative;
+}
+.ramme div{
+	background-color: #EBF0F1;
+	width: 80px;
+	height: 80px;
+	border: 1px solid black;
+}
+.stat{
+	position: static;
+}
+.abs{
+	position: absolute;
+	left: 70px;
+	top: 80px;
+}
+.rel{
+	position: relative;
+	top: 100px;
+	left: 50px;
+}
+.fix{
+	position: fixed;
+	left: 0px;
+	top: 150px;
+}
