@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title> Kom i gang med php </title>
+    <link rel="stylesheet" type="text/css" href="undervisning.css">
+</head>
+<body>
+	<h1> Eksempel på php-kode</h1>
+	<p> Opprett et html-dokument der du skriver inn følgende kode: <br><br>
+	< !doctype html ><br>
+	< html ><br>
+	< head ><br>
+    &nbsp;&nbsp; < title > Mitt første PHP-dokument < /title ><br>
+    &nbsp;&nbsp; < meta charset="UTF-8" ><br>
+	< /head ><br>
+	< body ><br>
+	&nbsp;&nbsp; < h1  > Velkommen til mitt første PHP-dokument! < /h1 ><br>
+	&nbsp;&nbsp; < ?php <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tall = 23;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "< p > Tallet er $tall. < /p >";<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tall = 42;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "< p >Nå er tallet $tall. < /p >";<br>
+	&nbsp;&nbsp; ?><br>
+	&nbsp;&nbsp; < p > Fordi denne teksten ikke er omsluttet av php-taggene, kan jeg skrive som om jeg jobber i et vanlig HTML-dokument. < /p ><br>
+	&nbsp;&nbsp; < ?php<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "< p >Her er vi tilbake i PHP, da må jeg bruke echo for å skrive HTML-kode. < /p >";<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "< p >Variabelen jeg definerte i starten av dokumentet, finnes fremdeles, tallet er $tall. < /p >";<br>
+	&nbsp;&nbsp; ?><br>
+	< /body ><br>
+	< /html ><br><br>
+
+	Hva skjer når vi åpner denne i chrome? <br><br>
+
+	Kopier kodebitene mellom <?php  og ?> over i php-editoren. Hva skjer nå?</p>
+
+	<h1> Hva betyr egentlig koden vi akkurat har skrevet? </h1>
+	<p> $ angir en variabel. Vi lager en variabel med variabelnavnet tall, og gir denne verdien 23 ved å skrive $tall = 23 <br>
+		echo "..." brukes for å skrive til nettsiden. Her kan også kommandoen print brukes. Vi skriver ut teksten "tallet er $tall", altså "tallet er 23"<br>
+		Vi gir variabelen en ny verdi ved å skrive $tall = 42.</p>
+
+	<h1> Oppgaver </h1>
+	<ol>
+		<li> s. 107: oppgave 10.1 - 10.4. <br>
+			<img src="oppg_107.png" width="60%"><br>
+			Gjør oppgavene først i en .html-fil og deretter i en .php-fil og åpne begge gjennom localhost. Hva er forskjellen? </li>
+		<li> Rydd i filstrukturen for faget på pcen din, i alle fall i www-mappen</li>
+	</ol>
+</body>
+</html>
