@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title> Variabler </title>
+    <link rel="stylesheet" type="text/css" href="undervisning.css">
+</head>
+<body>
+	<h1> Variabler </h1>
+	<p> Variabler brukes til å holde orden på verdier underveis i et program. Slike verdier kan være tekst (f.eks. navn), tall (f.eks. konstanter) eller de boolske verdiene sann eller usann. <br>
+	For å fortelle programmet at vi lagrer en variabel, bruker vi symbolet $: <br>
+	&nbsp;&nbsp; < ?php<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $fornavn = 'Asta';<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $etternavn = 'Fjærli';<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $alder = 27; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; // disse variablene kan vi skrive ut med kommandoen echo eller print<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo 'navnet er $fornavn $etternavn og alderen er $alder år';<br>
+	&nbsp;&nbsp; ? ><br>
+
+	<h1> Oppgave </h1>
+	<p> Skriv inn koden over i online-editoren, men bytt ut med ditt eget navn og alder. Kjør koden i online-editoren </p>
+
+	<h1> Variabelnavn </h1>
+	<p> Regler for å sette variabelnavn: </p>
+	<ul>
+		<li> Navnet kan ikke starte med et tall </li>
+		<li> Navnet kan ikke starte med stor forbokstav </li>
+		<li> Variabelnavn kan ikke hete det samme som metoder i php: f.eks. ikke hete $echo </li>
+		<li> Variabelnavn er case sensitive </li>
+		<li> Dersom variabelnavnet består av flere ord, gir vi det enten storForbokstav for neste ord, eller deler_med_understrek </li>
+		<li> Å bruke æøå i variabelnavn er lite ønskelig, da det begrenser bruk av koden </li>
+		<li> Variabelnavn av typen matematiske konstanter lagres med kun store bokstaver: f.eks. math.PI </li>
+	</ul>
+
+	<h1> Datatyper </h1>
+	<h2> String </h2>
+	<p> Datatypen string brukes for tekstvariabler. All tekst skal legges i ("tekst") <br>
+	&nbsp;&nbsp; < ?php<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tekstVar = "En setning med tekst!";<br>
+	&nbsp;&nbsp; ? ></p>
+
+	<h2> Number </h2>
+	<p> Number er alle tallvariabler:  heltall, decimaltall, negative tall, positive tall. Vi kaller heltall for datatypen <i>integer</i> og decimaltall for datatypen <i>float</i>. Vi lagrer alle numbervariabler som <br>
+	&nbsp;&nbsp; < ?php <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tallVar = 1; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tallVar = 1.0; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tallVar = -157.42 <br>
+	&nbsp;&nbsp; ? ></p>
+
+	<h2> Boolean </h2>
+	<p> Vi har to boolske variabler: sann (1) og usann (0). Disse legger blant annet grunnlag for if-setninger (kommer senere), der vi ber om at kode skal kjøres dersom en påstand er sann, eller usann. <br>
+	Boolske variabler lagres som <br>
+	&nbsp;&nbsp; < ?php <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $boolskVar = true; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $boolskVar = false; <br>
+	&nbsp;&nbsp; ? ></p>
+
+	<h2> Datakolleksjoner </h2>
+	<p> I tillegg kan vi samle variabler i datakolleksjonene array og object, dette kommer vi tilbake til senere i kapittelet. </p>
+
+	<h1> Aritmetiske operatorer </h1>
+	<p> For datatypen tall kan vi bruke de aritmetiske operatorene +, -, *, /, % og **. Den siste (**) støttes dessverre kun i nyeste utgaver, og ikke når vi kjører kode gjennom Wamp. </p>
+	<table>
+		<tr> <th> Operator </th> <th> Forklaring </th> <th> Eksempel </th> </tr>
+		<tr> <td> +  </td> <td> Addisjon </td> <td> $add = a + b; </td> </tr>
+		<tr> <td> - </td> <td> Subtraksjon </td> <td> $sub = c - b; </td> </tr>
+		<tr> <td> * </td> <td> Multiplikasjon </td> <td> $multi = b * c; </td> </tr>
+		<tr> <td> / </td> <td> Divisjon </td> <td> $divi = c / b; </td> </tr>
+		<tr> <td> % </td> <td> Modulus (restregning) </td> <td> $rest = c % a; </td> </tr>
+		<tr> <td> ** </td> <td> Eksponent </td> <td> $eksp = a**b gir a^b </td> </tr>
+	</table>
+
+	<h1> Eksempel med tallvariabler </h1>
+	<p> &nbsp;&nbsp; < ?php<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; $a = 10;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; $b = 15;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; $c = 2;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; $d = 7;<br><br>
+
+		&nbsp;&nbsp;&nbsp;&nbsp; $add = $a + $b;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; $sub = $b - $c;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; $prod = $a * $c;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; $div = $a / $c;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; $mod = $d % $c;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; $eksp = $d ** $c;<br><br>
+
+		&nbsp;&nbsp;&nbsp;&nbsp; echo "$a + $b av $a og $b er $add. $b - $c = $sub.  $a * $c = $prod. $a / $c = $div. $d % $c = $mod (dvs hva d / c gir i rest).  $d ^ $c = $eksp";<br>
+
+		&nbsp;&nbsp; ? >
+
+
+			<h1> Oppgaver </h1>
+		 	<p> s. 109: oppgave 10.1 - 10.4. <br>
+					<img src="oppg_109.png" width="60%"><br>
+					<img src="kode_10_3.png" width="60%"><br>
+					<img src="kode_10_4.png" width="60%"></p>
+</body>
+</html>
