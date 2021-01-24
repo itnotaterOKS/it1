@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Løkker </title>
+	<link rel="stylesheet" type="text/css" href="undervisning.css">
+</head>
+<body>
+	<h1> Hvorfor skal vi lære løkker? </h1>
+	<p> Oppgaver av typen dere så i forrige time kan la seg løse uten å bruke løkker, men det blir veldig tungvint og upraktisk: <br><br>
+	Oppgaven <i>Skriv kode som gjentar teksten ‘Jeg synes det er unødvendig å skrive det samme 10 ganger’ ti ganger på siden</i> kan løses enklest ved å skrive koden<br>
+	&nbsp;&nbsp; $tekst = 'Jeg synes det er unødvendig å skrive det samme 10 ganger';<br>
+	&nbsp;&nbsp; echo $tekst $tekst $tekst $tekst $tekst $tekst $tekst $tekst $tekst $tekst; <br><br>
+	Oppgaven <i>Skriv tregangeren (3 – 6 – 9 osv) til siden ved hjelp av aritmetiske operatorer</i> kan løses enklest ved å skrive ut <br>
+	&nbsp;&nbsp; echo (1*3).' '.(2*3).' '.(3*3).' '.(4*3).' '.(5*3).' '.(6*3).' '.(7*3).' '.(8*3).' '.(9*3).' '.(10*3).';<br><br>
+
+	Dette er unødvendig mye å skrive, og vi ser at mye kode repeterer seg. Det burde kunne løses enklere. Det er da løkker kommer inn i bildet. </p>
+
+	<h1> Hva er en løkke? </h1>
+	<p> En løkke er en metode for å gjenta kode. Vi har to hovedtyper av løkker: forløkker og whileløkker. Å lage en løkke går ut å si at en del av kode skal gjentas, enten et visst antall ganger (for-løkker) eller så lenge en påstand er sann (while-løkker). De har derfor noe forskjellig bruksområde. </p>
+	<!--I oppgavene dere fikk i forrige time kan a) b) og c) løses både med forløkker og whileløkker mens oppgave d) bare kan løses med whileløkker. </p>-->
+
+	<h1> Forløkker </h1>
+	<p> En for-løkke bruker vi når vi vet hvor mange ganger en kode skal kjøres: f.eks. når vi skal lage gangetabeller, fylle en tabell med 10 rader eller liknende. <br>
+	For-løkker i php har strukturen <br>
+	&nbsp;&nbsp; for($teller = startverdi; $teller <= sluttverdi; $teller øker){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; //kode som skal gjentas <br>
+	&nbsp;&nbsp; }<br><br>
+	Telleren kaller vi ofte i eller j, og for å øke den kan vi skrive i++ (teller øker med 1) i+=2 (teller øker med 2) osv.<br><br>
+
+	<b> Eksempel 1: skriv ut tallene fra 1 til 10 med en løkke </b><br>
+	&nbsp;&nbsp; for($i=1; $i<=10; $i++){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "$i < br >";<br>
+	&nbsp;&nbsp; }<br><br>
+
+	<b> Eksempel 2: skriv ut partallene fra 2 til 20 med en løkke </b><br>
+	Her kan vi enten la telleren øke med 2 (i+=2) eller vi kan legge en if-setning inne i løkka: <br>
+	&nbsp;&nbsp; for($i=2; $i<=20; $i+=2){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "$i ";<br>
+	&nbsp;&nbsp; }<br><br>
+	&nbsp;&nbsp; for($i=2; $i<=20; $i++){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; if($i%2==0){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "$i ";<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;}<br>
+
+	<h1> Whileløkker </h1>
+	<p> En while-løkke bruker vi når kode skal gjentas så lenge en betingelse er oppfylt, dvs. i stedet for å lage et uvisst antall if-else-setninger. <br>
+	While-løkker har strukturen <br>
+	&nbsp;&nbsp; while(påstand er sann){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; // kode som skal gjentas<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; // endring av betingelse for påstanden<br>
+	&nbsp;&nbsp; }<br><br>
+	Påstanden kan for eksempel være $i<=10, slik som i forløkkeeksempelet over. I en whileløkke endres ikke betingelsen i () slik som i forløkker, men mellom {} slik at betingelsen kan bli usann en gang og bryter ut av løkken.<br>
+
+	<b> Eksempel 1: skriv ut tallene fra 1 til 10 med en løkke </b><br>
+	&nbsp;&nbsp; $i = 1;<br>
+	&nbsp;&nbsp; while($i <= 10){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "$i ";<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $i++;<br>
+	&nbsp;&nbsp; }<br><br>
+
+	<b> Eksempel 2: skriv ut nye tilfeldige tall mellom 1 og 10 så lenge det tilfeldige tallet ikke er et partall</b><br>
+	&nbsp;&nbsp; $tall = rand(1, 10);<br>
+	&nbsp;&nbsp; while ($tall%2 != 0){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "$tall ";<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tall = rand(1, 10);<br>
+	&nbsp;&nbsp;}<br><br>
+
+	<b> Faren med whileløkker:</b> Hvis vi glemmer å endre betingelsen for whileløkken, eller har konstruert påstanden slik at den alltid er sann, kan vi få en uendelig whileløkke: kode som gjentas i det uendelige. Da må dere bare avslutte nettleser, fikse problemet og prøve igjen. <br>
+	Et eksempel på dette er kodene under. Hva går galt her?<br>
+	&nbsp;&nbsp; $tall = 2;<br>
+	&nbsp;&nbsp; while ($tall%2==0){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo ($tall);<br>
+	&nbsp;&nbsp; }<br><br>
+	&nbsp;&nbsp; $tall = 2;<br>
+	&nbsp;&nbsp; while ($tall%2=0){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo ($tall);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tall = rand(1, 50);<br>
+	&nbsp;&nbsp; }<br><br>
+	&nbsp;&nbsp; $i = 1;<br>
+	&nbsp;&nbsp; while ($i >= 0){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo ($i);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $i++;<br>
+	&nbsp;&nbsp; }</p>
+
+	<h1> Oppgavene som er enklere å løse med løkker </h1>
+	<p> Følgende oppgaver <i>kan</i> løses uten løkker, men det blir veldig tungvint <br>
+	<i> Skriv kode som gjentar teksten ‘Jeg synes det er unødvendig å skrive det samme 10 ganger’ ti ganger på siden. </i><br>
+	&nbsp;&nbsp; for($i=1; $i<=10; $i++){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "Jeg synes det er unødvendig å skrive det samme 10 ganger< br >";<br>
+	&nbsp;&nbsp; }<br><br>
+
+	<i> Skriv tregangeren (3 – 6 – 9 osv) til siden ved hjelp av aritmetiske operatorer.</i> <br>
+	&nbsp;&nbsp; for($i=1; $i<=10; $i++){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo ($i*3)." ";<br>
+	&nbsp;&nbsp; }<br><br>
+
+	<i> Presenter den lille gangetabellen (opp til 10*10) i tabellformat på nettsiden ved hjelp av aritmetiske operasjoner. Alt skal skrives mellom < ?php og ? ></i><br>
+	Denne går vi gjennom etter pause. <br><br>
+
+	<i> Skriv kode som oppfyller følgende pseudokode:</i><br>
+	&nbsp;&nbsp; generer et tilfeldig tall mellom 0 og 30 og skriv dette på siden;<br>
+	&nbsp;&nbsp; hvis det nye tallet ikke er delelig med seks{<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; generer et nytt tilfeldig tall mellom 0 og 30 og skriv dette på siden;<br>
+	&nbsp;&nbsp; } <br>
+	&nbsp;&nbsp; hvis det nye tallet ikke er delelig med seks{<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; generer et nytt tilfeldig tall mellom 0 og 30 og skriv dette på siden;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; Osv helt til tallet som blir generert er delelig med seks.<br><br>
+	&nbsp;&nbsp; $tilfeldig = rand(0, 30);<br>
+	&nbsp;&nbsp; while($tilfeldig%6!=0){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo "$tilfeldig ";<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tilfeldig = rand(0, 30);<br>
+	&nbsp;&nbsp;}</p>
+
+	<h1> Oppgaver </h1>
+	<p>Presenter den lille gangetabellen (opp til 10*10) i tabellformat på nettsiden ved hjelp av aritmetiske operasjoner. Alt skal skrives mellom < ?php og ? ><br>
+	I oppgavesettet på itslearning: oppgave 2c) - 2g). </p>
+	<!--<p> s. 115: Oppgave 10.14, 10.15, 10.16, 10.17, 10.19, 10.20. Vi går gjennom 10.20 neste time.</p>-->
+
+
+
+
+
+
+
+
+</body>
+</html>

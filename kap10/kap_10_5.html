@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> if-setninger </title>
+	<link rel="stylesheet" type="text/css" href="undervisning.css">
+</head>
+<body>
+	<h1> Hva er en if-setning? </h1>
+	<p> En if-setning gir oss muligheten til å kjøre ulike deler av koden avhengig av forholdene som ligger til rette. Vi kan illustrere if-setninger med enkle flytdiagrammer: <br>
+
+	Under vises flytdiagrammet for et program som genererer et tilfeldig tall og sjekker om det er et oddetall eller partall: </p>
+	<img src="flytdiagram.png" width="500px">
+
+	<p> I dette diagrammet ligger det flere opplysninger: </p>
+	<ol>
+		<li> Generer først et tilfeldig tall. </li>
+		<li> Beregner tall % 2 </li>
+		<li> Hvis tall % 2 er 0: skriv "tallet er et partall"</li>
+		<li> Hvis tall % 2 er 1: skriv "tallet er et oddetall" </li>
+	</ol>
+
+	<p> For å oversette dette til kode, må vi innom flere metoder. Heng med! </p>
+
+	<h1> Å genererere tilfeldig tall </h1>
+	<p> Metoden rand(min, max); genererer et tilfeldig tall mellom tallene min og max. Her setter jeg min = 0 og max = 10.<br><br>
+
+	Altså:<br>
+	&nbsp;&nbsp; < ?php <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tilfeldig = rand(0, 10);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo $tilfeldig .'< br >';<br>
+	&nbsp;&nbsp; ?><br><br>
+
+	<h2> Oppgave </h2>
+	<p> Skriv kode for å generere et tilfeldig tall mellom 1 og 100. Skriv ut tallet på siden</p>
+
+	<h1> Å sammenlikne tall </h1>
+	<p> Tidligere har vi gått gjennom det vi kaller tilordningsoperatorer: de operatorene som tilordner en variabel en ny verdi. F.eks vil operatoren <br>
+	&nbsp;&nbsp; a = a + 3; <br>
+	gi variabelen a verdien // gammel verdi + 3. <br>
+	Sammenlikningsoperatorene skiller seg fra tilordningsoperatorene ved at de sjekker om en variabel har en gitt verdi:
+	</p>
+	<table>
+		<tr> <th> Operator </th> <th> Forklaring </th> <th> Eksempel </th> </tr>
+		<tr> <td> ==  </td> <td> Lik verdi </td> <td> 10 == '10'; gir true</td> </tr>
+		<tr> <td> != </td> <td> Ikke lik verdi </td> <td> 10 != 5; gir true </td> </tr>
+		<tr> <td> > </td> <td> Større enn </td> <td> 10 > 9;  gir true, 10 > 10; gir false </td> </tr>
+		<tr> <td> < </td> <td> Mindre enn </td> <td> 9 < 10; gir true; 10 < 10; gir false </td> </tr>
+		<tr> <td> >= </td> <td> Større eller lik </td> <td>10 >= 10; gir true; </td> </tr>
+		<tr> <td> <= </td> <td> Mindre eller lik </td> <td> 10 <= 10; gir true;</td> </tr>
+	</table>
+
+	<h2>  Oppgaver </h2>
+	<p> Lag først variablene $a = 3, $b = 7, $c='7'. Hvilket utfall (sant eller usant) forventer du fra kodene nedenfor? Skriv ut resultatet <b>etter</b> at du har foreslått et resultat for sidemannen. <br><br>
+		$a = 3;<br>
+		$b = 7;<br>
+		$c = '7';<br>
+		echo ($b == $c).'< br >';<br>
+		echo ($b === $c).'< br >';<br>
+		echo ( $a < $b).'< br >';<br>
+		echo ( $a <= $b).'< br >';<br>
+		echo ($a > $b).'< br >';<br>
+		echo ($a != $b).'< br >';<br>
+		echo ($b != $c).'< br >';<br>
+		echo ($a <= $a).'< br >';</p>
+
+	<h1> Å bruke if-setninger til å styre hvilken kode som kjøres </h1>
+	<p> I en if-setning bruker vi sammenlikningsoperatorene som en forutsetning for kode som kjøres. If-setninger er strukturert som: <br>
+	&nbsp;&nbsp; < ?php <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; if(sammenlikningspåstand){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // kode som kjøres; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; ? ><br><br>
+	For eksempel vil koden for å skrive til siden "Tallet er mindre enn 10" dersom et satt tall er mindre enn 10 skrives som: <br>
+	&nbsp;&nbsp; < ?php<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tall = 0; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; if($tall < 10){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo 'Tallet er mindre enn 10'; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; ?> </p>
+
+	<h1> Oppgave </h1>
+	<p> Utvid koden over til å sjekke om et tilfeldig tall mellom 0 og 100 er mindre enn 10</p>
+
+	<h1> Else-if </h1>
+	<p> Vi har også mulighet til å skrive if-setninger der ulike betingelser gir ulike konsekvenser: <br>
+	&nbsp;&nbsp; dersom betingelse1 == sann{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; // kjør kode1;<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; dersom betingelse1 != sann, mens betingelse 2 == sann{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; // kjør kode2; <br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; dersom ingen av disse er sanne{<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; // kjør kode3; <br>
+	&nbsp;&nbsp;}<br>
+	// koden skrevet over kalles pseudokode og er en forklarende kode som ikke kun kan leses av mennesker, ikke av maskinen.
+	<br><br>
+	Koden over vil skrives som: <br>
+	&nbsp;&nbsp; < ?php <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; if(betingelse1 == true){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // kode som kjøres <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; else if(betingelse2 == true){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // kode som kjøres <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; else{ <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // kode som kjøres <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; ?> <br><br>
+	For eksempel kan vi sjekke om et tall mellom 0 og 100 er mindre enn 10, større enn 90 eller et sted i mellom: <br>
+
+	&nbsp;&nbsp; < ?php<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tall = rand(0,100);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo $tall.'< br >';<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; if($tall < 10){ <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo 'Tallet er mindre enn 10 < br >'; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; else if($tall > 90){ <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo 'Tallet er større enn 90 < br >';<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; else{ <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo 'Tallet er mellom 10 og 90 < br >'; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+	&nbsp;&nbsp; ? ><br>
+
+	<h1> Hva hvis flere påstander skal være sanne? </h1>
+	<p> Vi kan sette flere påstander som kriterie for if-setninger ved å bruke de logiske operatorene og (&&), eller (||) eller ikke (!). I eksemplene er a = 7, b = 3:</p>
+	<table>
+		<tr> <th> Operator </th> <th> Forklaring </th> <th> Eksempel </th> </tr>
+		<tr> <td> && </td> <td> Og (begge påstander sanne) </td> <td> (a < 10 && b > 2); a mindre enn 10 og b større enn 2 - gir true </td> </tr>
+		<tr> <td> || </td> <td> Eller (en av påstandene sanne) </td> <td> (a < 8 || b > 5); a mindre enn 8 eller b større enn 5 - gir true</td> </tr>
+		<tr> <td> ! </td> <td> Ikke (påstanden er ikke sann) </td> <td> !(a < b); a er ikke mindre enn b - gir true</td> </tr>
+	</table>
+	<p> På den måten kan vi for eksempel gi betingelsen (tall mellom 0 og 50 er mindre eller lik 20 og delelig med 5): <br>
+
+	&nbsp;&nbsp; < php <br>
+	&nbsp;&nbsp;&nbsp;&nbsp; $tall = rand(0,50);<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo $tall.'< br >';<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; if($tall <= 20 && $tall%5==0){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo'Tallet er mindre enn 20 og delelig med 5< br >';<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; ? > </p>
+
+	<h2> Oppgaver </h2>
+	<p>1. Skriv kode som lager et tilfeldig tall mellom 1 og 50 og sjekker om det er et oddetall eller et partall. <br>
+		2. Du kan bare kjøre i en berg-og-dal-bane i en  fornøyelsespark dersom du er over 100 cm. Skriv kode som genererer en tilfeldig høyde mellom 50 cm og 200 cm og bruker if-setninger til å finne ut om du er høy nok.<br>
+	3. Du kan bare kjøre i en berg-og-dal-bane i en fornøyelsespark dersom du er over 100 cm og under 180 cm. Skriv kode som genererer en tilfeldig høyde mellom 50 cm og 200 cm og bruker if-setninger til å finne ut om du er høy nok.<br>
+	4. Oppgave 2a) og 2b) i pdf'en med ekstraoppgaver.</p>
+ </body>
+</html>

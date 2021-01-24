@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Arrays </title>
+	<link rel="stylesheet" type="text/css" href="undervisning.css">
+</head>
+<body>
+	<h1> Hva er en array? </h1>
+	<p> En array er det vi kaller en datakolleksjon: En samling av variabler. Så langt har vi sortert all data i enkeltvariabler, noe som er greit når vi ikke har mye data og når vi ikke skal gjenta funksjoner for flere variabler, men som blir tungvint hvis vi for eksempel skal finne gjennomsnittet av 100 tall. <br><br>
+	I php opererer vi med to typer arrays: indekserte arrays (minner om arrays i JavaScript) og assosiative arrays (minner om objects i JavaScript). <br><br>
+	Vi oppretter arrays i php på samme måte som vi oppretter enkeltvariabler: $arrayNavn = ;<br>
+	Verdien legger vi til i klammeparenteser og skiller med komma: $arrayNavn = [verdi1, verdi2, verdi3];<br>
+	Alternativt kan bokas notasjon brukes: $arrrayNavn = array(verdi1, verdi2, verdi3);</p>
+
+	<h1> Indekserte arrays </h1>
+	<p> I en indeksert array, referer vi alltid til den plassen (indexen) en verdi har i arrayen. Hvis vi har en array med fire verdier, har den første verdien index 0 og den siste verdien index 3. Denne arrayen har lengde 4. </p>
+
+	<h1> Oppgave </h1>
+	<p> Lag to arrayer: en array navn som inneholder navn på familiemedlemmene dine og en array alder som inneholder alderen deres. Skriv ut count($navn) og count($alder) (ved bruk av echo) samt var_dump($navn) og var_dump($alder) (trenger ikke bruke echo). Hva får du ut? </p>
+
+	<h1> Metodene count og var_dump, å skrive ut enkeltvariabler fra en indeksert array </h1>
+	<p> count($arrayNavn) gir ut antall elementer i arrayen. var_dump($arrayNavn) gir ut all informasjon om arrayen. I tillegg kan vi skrive ut enkeltverdier i arrayen med <br>
+		echo $navn[0]."< br >";<br>
+		echo $navn[count($navn)-1]."< br >";<br>
+
+	<h1> Å løkke gjennom en array </h1>
+	<p> Når vi har større datasett er det tungtvint å skrive ut én og én verdi fra arrayen (da kunne vi jo like gjerne laget enkeltvariabler). I stedet kan vi løkke gjennom arrayen og skrive ut $arrayNavn[i]:<br>
+	I løkken <br>
+	&nbsp;&nbsp; for ($i = plassen første element; $i <= plassen til siste element; $i++){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; // kode<br>
+	&nbsp;&nbsp; }<br>
+	Vil plassen til første element være 0 og plassen til siste element være lengde-1. Løkken blir dermed <br>
+	&nbsp;&nbsp; for ($i = 0; $i < count($arrayen); $i++){ // eller for ($i = 0; $i <= count($arrayen)-1; $i++){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; // kode<br>
+	&nbsp;&nbsp; }<br><br>
+
+	<b> Eksempel: skrive ut én og én verdi </b><br>
+	&nbsp;&nbsp; $a = [1, 4, 11, -3, 5, 7];<br>
+	&nbsp;&nbsp; var_dump($a);<br>
+	&nbsp;&nbsp; for($i = 0; $i < count($a); $i++){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; echo $a[$i]."< br >";<br>
+	&nbsp;&nbsp; }<br><br>
+
+	<b> Eksempel: finne det største tallet i arrayen </b><br>
+	&nbsp;&nbsp; $storst = $a[0]; // antar at den største verdien står på plass 0<br>
+	&nbsp;&nbsp; for($i = 0; $i < count($a); $i++){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; if($a[$i] > $storst){ // sjekker om det finnes en større verdi<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $storst = $a[$i]; // og erstatter i så fall storst med denne<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; echo "Det største tallet i arrayen er $storst < br >";</p>
+
+
+	<h1> Oppgaver </h1>
+	<p> 1. Skriv kode som finner det minste tallet i en array. <br>
+	2. Skriv kode som finner summen av tallene i en array med en løkke og med metoden array_sum($arraynavn). <br>
+	3. Skriv kode som finner gjennomsnittet av tallene i en array.</p>
+
+	<h1> Assosiative arrays </h1>
+	<p> Mens vi i indekserte arrays refererer til indexen til en verdi, gir vi i assosiative arrays hver verdi en tekst som vi senere refererer til for å hente ut igjen variablen. Vi oppretter assosiative arrays på samme måte som indekserte arrays, men i stedet for å legge inn kun verdiene må vi også legge inn en nøkkel ved bruk av "nøkkel"=>"verdi": <br>
+	&nbsp;&nbsp; $familie = ["Asta"=>"mor", "Christian"=>"far", "Iver"=>"barn"];<br>
+	&nbsp;&nbsp; var_dump($familie);<br>
+	&nbsp;&nbsp; echo "Asta er ".$familie['Asta']."< br >";<br><br>
+
+	Skal vi kunne hente ut navnene må nøkkel og verdi være omvendt:<br>
+	&nbsp;&nbsp; $familie = ["mor"=>"Asta", "far"=>"Christian", "barn"=>"Iver"];<br>
+	&nbsp;&nbsp; var_dump($familie);<br>
+	&nbsp;&nbsp; echo "Barnet heter ".$familie['barn']."< br >";</p>
+
+	<h1> Sortere arrays: tilleggsstoff </h1>
+	<p> Det finnes flere innebygde metoder for å sortere arrays: </p>
+	<table>
+		<tr><th> Metode </th><th> Forklaring </th></tr>
+		<tr><td> sort() </td><td> sorterer indekserte arrays i stigende rekkefølge </td></tr>
+		<tr><td> rsort() </td><td> sorterer indekserte arrays i synkende rekkefølge </td></tr>
+		<tr><td> asort() </td><td> sorterer assosiatoive arrays i stigende rekkefølge etter verdi </td></tr>
+		<tr><td> ksort() </td><td> sorterer assosiatoive arrays i stigende rekkefølge etter nøkkel </td></tr>
+		<tr><td> arsort() </td><td> sorterer assosiatoive arrays i synkende rekkefølge etter verdi </td></tr>
+		<tr><td> krsort() </td><td> sorterer assosiatoive arrays i synkende rekkefølge etter nøkkel </td></tr>
+	</table>
+
+	<p> <b>Eksempel: Sortere familie-arrayen i alfabetisk rekkefølge etter navn </b><br>
+	&nbsp;&nbsp; asort($familie);<br>
+	&nbsp;&nbsp; var_dump($familie); <br>
+
+	<h1> Oppgaver </h1>
+	<p>1. Lag en assosiativ array som inneholder fem ulike dyrearter som nøkler og navnene deres som verdi. Skriv ut en og en verdi ved å referere til nøkkelen. <br>
+	2. Opprett en indeksert array som inneholder tallverdier. Sorter arrayen i stigende og i synkende rekkefølge. <br>
+	3. Opprett en assosiativ array som inneholder tekstverdier. Sorter arrayen i stigende og i synkende rekkefølge etter verdier og etter nøkler <br>
+	<!--4. Lag en side som skriver ut et tilfeldig kort i en kortstokk. Hint: lag en indeksert array for farge og en indeksert array for tall. Generer så to  tilfeldige tall som gir plasseringen til det kortet du trekker.<br>
+	&nbsp;&nbsp; Eks: farge[1] gir hjerter, tall[11] gir dame, dvs har du har trukket hjerter dame.--></p>
+
+
+
+</body>
+</html>
