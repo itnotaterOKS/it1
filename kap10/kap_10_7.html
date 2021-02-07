@@ -74,6 +74,13 @@
 	&nbsp;&nbsp; var_dump($familie);<br>
 	&nbsp;&nbsp; echo "Barnet heter ".$familie['barn']."< br >";</p>
 
+	<h1> Løkke gjennom assosiative arrays </h1>
+	<p> Det går også an å løkke gjennom en assosiativ array, men syntaxen for dette er litt annerledes enn en vanlig for-løkke og kalles en foreach-løkke (for hver verdi i den assosiative arrayen): <br>
+  &nbsp;&nbsp; $familie = ["Asta"=>"mor", "Christian"=>"far", "Iver"=>"barn"];<br>
+  &nbsp;&nbsp; foreach($familie as $i => $i_verdi){<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; echo "Her er " . $i . " nøkkelen og " . $i_verdi . " verdien."; <br>
+  &nbsp;&nbsp;}</p>
+
 	<h1> Sortere arrays: tilleggsstoff </h1>
 	<p> Det finnes flere innebygde metoder for å sortere arrays: </p>
 	<table>
@@ -96,7 +103,10 @@
 	3. Opprett en assosiativ array som inneholder tekstverdier. Sorter arrayen i stigende og i synkende rekkefølge etter verdier og etter nøkler <br>
 	<!--4. Lag en side som skriver ut et tilfeldig kort i en kortstokk. Hint: lag en indeksert array for farge og en indeksert array for tall. Generer så to  tilfeldige tall som gir plasseringen til det kortet du trekker.<br>
 	&nbsp;&nbsp; Eks: farge[1] gir hjerter, tall[11] gir dame, dvs har du har trukket hjerter dame.--></p>
-
+	<img src="oppg_kap10_7.png" width="60%"><br>
+	<img src="kode_10_10.png" width="60%"><br>
+	<img src="oppg_kap10_7_2.png" width="60%"><br>
+	<img src="kode_10_11.png" width="60%"><br>
 
 
 </body>
